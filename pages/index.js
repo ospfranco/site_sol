@@ -1,8 +1,12 @@
 import Image from "next/image";
 import { Preview } from "../components/preview.component";
 import Logo from "../public/Logo.svg";
-import GoogleMaps from "../public/GoogleMaps.jpg";
-import EmojiPicker from "../public/EmojiPicker.jpg";
+import Maps from "../public/Maps.png";
+import Emoji from "../public/Emoji.png";
+import Gifs from "../public/Gifs.png";
+import Clipboard from "../public/Clipboard.png";
+import WindowManagement from "../public/WindowManagement.png";
+import Scratchpad from "../public/Scratchpad.png";
 
 export default function Home() {
   return (
@@ -37,42 +41,96 @@ export default function Home() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 py-10">
           <div className="rounded-lg bg-neutral-800 overflow-hidden">
-            <Image src={GoogleMaps} alt="Google maps preview" />
+            <div className="h-32 relative">
+              <Image
+                src={Maps}
+                alt="Google maps preview"
+                width="100%"
+                height="100%"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
             <div className="p-3">
               <h5 className="font-bold">Google Maps</h5>
               <p className="text-gray-400">Quickly lookup adresses</p>
             </div>
           </div>
           <div className="rounded-lg bg-neutral-800 overflow-hidden">
-            <Image src={EmojiPicker} alt="Emoji picker preview" />
+            <div className="h-32 relative">
+              <Image
+                src={Emoji}
+                alt="Emoji picker preview"
+                width="100%"
+                height="100%"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
             <div className="p-3">
               <h5 className="font-bold">Emoji Picker</h5>
               <p className="text-gray-400">Faster and more reliable</p>
             </div>
           </div>
           <div className="rounded-lg bg-neutral-800 overflow-hidden">
-            <Image src={EmojiPicker} alt="Gif picker preview" />
+            <div className="h-32 relative">
+              <Image
+                src={Gifs}
+                alt="Gif picker preview"
+                width="100%"
+                height="100%"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
             <div className="p-3">
               <h5 className="font-bold">Gif Picker</h5>
               <p className="text-gray-400">Find that perfect Gif</p>
             </div>
           </div>
           <div className="rounded-lg bg-neutral-800 overflow-hidden">
-            <Image src={EmojiPicker} alt="Gif picker preview" />
+            <div className="h-32 relative">
+              <Image
+                src={Clipboard}
+                alt="Clipboard picker preview"
+                width="100%"
+                height="100%"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
             <div className="p-3">
               <h5 className="font-bold">Clipboard Manager</h5>
               <p className="text-gray-400">Never loose a copied text</p>
             </div>
           </div>
           <div className="rounded-lg bg-neutral-800 overflow-hidden">
-            <Image src={EmojiPicker} alt="Gif picker preview" />
+            <div className="h-32 relative">
+              <Image
+                src={WindowManagement}
+                alt="Window management picker preview"
+                width="100%"
+                height="100%"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
             <div className="p-3">
               <h5 className="font-bold">Window Manager</h5>
               <p className="text-gray-400">Quickly organize your desktop</p>
             </div>
           </div>
           <div className="rounded-lg bg-neutral-800 overflow-hidden">
-            <Image src={EmojiPicker} alt="Gif picker preview" />
+            <div className="h-32 relative">
+              <Image
+                src={Scratchpad}
+                alt="Scratchpad picker preview"
+                width="100%"
+                height="100%"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
             <div className="p-3">
               <h5 className="font-bold">Note Scratchpad</h5>
               <p className="text-gray-400">Take a note from anywhere</p>
