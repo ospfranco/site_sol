@@ -7,10 +7,16 @@ import Gifs from "../public/Gifs.png";
 import Clipboard from "../public/Clipboard.png";
 import WindowManagement from "../public/WindowManagement.png";
 import Scratchpad from "../public/Scratchpad.png";
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <div >
+    <div>
+      <Head>
+        <title>Sol - open source macOS launcher</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+
       <div className="py-3 px-6 mx-auto w-full max-w-3xl flex sticky top-0 bg-black bg-opacity-60 bg-clip-padding backdrop-filter backdrop-blur-sm z-10">
         <Image src={Logo} height={29} width={78} alt="Sol logo" />
         <div className="flex-1" />
