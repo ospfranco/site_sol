@@ -15,6 +15,11 @@ export default function Home() {
       <Head>
         <title>Sol - open source macOS launcher</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="Sol" />
+        <meta name="twitter:title" content="An open source macOS launcher" />
+        <meta name="twitter:description" content="A macOS launcher focused on simplicity and speed. Free and open source." />
+        <meta name="twitter:image" content="https://www.solapp.io/preview.png" />
       </Head>
 
       <div className="py-3 px-6 mx-auto w-full max-w-3xl flex sticky top-0 bg-black bg-opacity-60 bg-clip-padding backdrop-filter backdrop-blur-sm z-10">
