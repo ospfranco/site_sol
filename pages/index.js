@@ -9,8 +9,15 @@ import Clipboard from "../public/Clipboard.png";
 import WindowManagement from "../public/WindowManagement.png";
 import Scratchpad from "../public/Scratchpad.png";
 import Head from "next/head";
+import { useState } from "react";
 
 export default function Home() {
+  const [isCopied, setIsCopied] = useState(false);
+  const copyCommand = () => {
+    navigator.clipboard.writeText("brew install --cask sol");
+    setIsCopied(true);
+  };
+
   return (
     <div>
       <Head>
@@ -204,8 +211,21 @@ export default function Home() {
         Download
       </a>
       <h4 className="text-gray-200 text-center max-w-lg mx-auto mt-10">
-        or check out the source code
+        or if you are terminal warklock
       </h4>
+      <div
+        className="border bg-neutral-900 border-neutral-800 w-64 mx-auto text-center h-10 rounded mt-10 text-neutral-400 cursor-pointer group hover:border-white transition flex flex-col justify-center align-center"
+        onClick={copyCommand}
+      >
+        <p className="group-hover:hidden">brew install --cask sol</p>
+        <p className="hidden group-hover:block text-white">
+          {isCopied ? "Copied" : "Click to copy"}
+        </p>
+      </div>
+      <h4 className="text-gray-200 text-center max-w-lg mx-auto mt-10">
+        or, even better, <span className="font-bold">contribute!</span>
+      </h4>
+
       <a
         className="border px-3 rounded flex items-center justify-center w-44 mx-auto py-3 mt-6 border-neutral-400 hover:border-white transition cursor-pointer"
         href="https://github.com/ospfranco/sol"
