@@ -211,7 +211,7 @@ export default function Home() {
         Download
       </a>
       <h4 className="text-gray-200 text-center max-w-lg mx-auto mt-10">
-        or if you are terminal warklock
+        or if you are terminal warlock
       </h4>
       <div
         className="border bg-neutral-900 border-neutral-800 w-64 mx-auto text-center h-10 rounded mt-10 text-neutral-400 cursor-pointer group hover:border-white transition flex flex-col justify-center align-center"
