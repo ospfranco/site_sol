@@ -12,6 +12,12 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 a {
   color: inherit;
   text-decoration: none;
