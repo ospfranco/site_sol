@@ -1,14 +1,16 @@
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-
-import * as THREE from 'three';
-import { MeshLine, MeshLineMaterial, MeshLineRaycast } from 'three.meshline';
+// import './style.css';
+import * as THREE from '/three.module.js';
+// import \* as THREE from './vendor/three/build/three.module.js';
+// import { OrbitControls } from '/three/examples/jsm/controls/OrbitControls';
 // Scene = container
+console.log("Lodaded!");
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
+  alpha: true
 });
 renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setSize( window.innerWidth, window.innerHeight );
@@ -18,15 +20,15 @@ renderer.render( scene, camera );
 
 // ------ adding elements ------
 const geometry = new THREE.SphereGeometry( 10, 32, 16 );
-const material = new THREE.MeshBasicMaterial( { color: 0xffffff, wireframe: true } );
+const material = new THREE.MeshBasicMaterial( { color: 0xa3a3a3, wireframe: true } );
 const torus = new THREE.Mesh (geometry, material);
 
-scene.add(torus);
+// scene.add(torus);
 
 const pointLight = new THREE.PointLight(0xffffff)
 pointLight.position.set(5,5,5)
 
-const ambientLight = new THREE.AmbientLight(0xffffff);
+const ambientLight = new THREE.AmbientLight(0xa3a3a3);
 scene.add(pointLight, ambientLight)
 
 // const lightHelper = new THREE.PointLightHelper(pointLight);
@@ -34,7 +36,7 @@ scene.add(pointLight, ambientLight)
 
 function addStar() {
   const geometry = new THREE.SphereGeometry(0.25, 24, 24);
-  const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
+  const material = new THREE.MeshStandardMaterial({ color: 0xa3a3a3 });
   const star = new THREE.Mesh(geometry, material);
 
   const [x, y, z] = Array(3)
@@ -51,14 +53,12 @@ function moveCamera() {
   const t = document.body.getBoundingClientRect().top; 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
-  camera.rotation.y = t * -0.0002;
+  camera.rotation.y = t * -0.02;
 }
-document.body.onscroll = moveCamera;
-moveCamera();
-var lightness = 0;
-var rotSpeed = 0.001;
-
-const controls = new OrbitControls(camera, renderer.domElement);
+// document.body.onscroll = moveCamera;
+// moveCamera();
+const rotSpeed = 0.001;
+// const controls = new OrbitControls(camera, renderer.domElement);
 // Animation
 function animate() {
   // Rotate and change saturation lightness of each star

@@ -34,6 +34,7 @@ export default function Home() {
           name="twitter:image"
           content="https://www.solapp.io/preview.png"
         />
+
       </Head>
     <canvas id="bg"></canvas>
     <script type="module" src="/main.js"></script>
