@@ -14,7 +14,7 @@ const renderer = new THREE.WebGLRenderer({
 });
 renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setSize( window.innerWidth, window.innerHeight );
-camera.position.setZ(30);
+camera.position.setZ(50);
 
 renderer.render( scene, camera );
 
@@ -35,7 +35,7 @@ scene.add(pointLight, ambientLight)
 // scene.add(lightHelper);
 
 function addStar() {
-  const geometry = new THREE.SphereGeometry(0.25, 24, 24);
+  const geometry = new THREE.SphereGeometry(0.25, 12, 12);
   const material = new THREE.MeshStandardMaterial({ color: 0xa3a3a3 });
   const star = new THREE.Mesh(geometry, material);
 
@@ -47,16 +47,16 @@ function addStar() {
   scene.add(star);
 }
 torus.position.z = 30;
-Array(200).fill().forEach(addStar);
+Array(250).fill().forEach(addStar);
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top; 
-  camera.position.z = t * -0.01;
-  camera.position.x = t * -0.0002;
-  camera.rotation.y = t * -0.02;
+  camera.position.z = t * 0.005;
+  // camera.position.x = t * -0.002;
+  // camera.rotation.y = t * -0.002;
 }
-// document.body.onscroll = moveCamera;
-// moveCamera();
+document.body.onscroll = moveCamera;
+moveCamera();
 const rotSpeed = 0.001;
 // const controls = new OrbitControls(camera, renderer.domElement);
 // Animation
@@ -70,11 +70,12 @@ function animate() {
   //   star.material.color = new THREE.Color("hsl(255, 100%, " + lightness + "%)");
   // }
 
-  let x = camera.position.x;
-  let z = camera.position.z;
-  camera.position.x = x * Math.cos(rotSpeed) + z * Math.sin(rotSpeed);
-  camera.position.z = z * Math.cos(rotSpeed) - x * Math.sin(rotSpeed);
-  camera.lookAt(scene.position);
+  // Rotation
+  // let x = camera.position.x;
+  // let z = camera.position.z;
+  // camera.position.x = x * Math.cos(rotSpeed) + z * Math.sin(rotSpeed);
+  // camera.position.z = z * Math.cos(rotSpeed) - x * Math.sin(rotSpeed);
+  // camera.lookAt(scene.position);
 
   requestAnimationFrame( animate );
   torus.rotation.x += 0.01;
