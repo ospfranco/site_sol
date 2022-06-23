@@ -34,8 +34,10 @@ export default function Home() {
           name="twitter:image"
           content="https://www.solapp.io/preview.png"
         />
-      </Head>
 
+      </Head>
+    <canvas id="bg"></canvas>
+    <script type="module" src="/main.js"></script>
       <div className="py-3 px-6 mx-auto w-full max-w-3xl flex sticky top-0 bg-black bg-opacity-60 bg-clip-padding backdrop-filter backdrop-blur-sm z-10">
         <Image src={Logo} height={29} width={78} alt="Sol logo" />
         <div className="flex-1" />
