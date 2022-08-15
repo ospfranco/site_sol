@@ -136,7 +136,7 @@ export default function Home() {
             <div className="px-6 py-5">
               <h5 className="">Clipboard Manager</h5>
               <p className="mt-1 text-sm text-gray-400">
-                Never loose a copied text
+                Never lose copied text
               </p>
             </div>
           </div>
