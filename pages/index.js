@@ -1,15 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
+import Head from "next/head";
 import Image from "next/image";
-import { Preview } from "../components/preview.component";
-import Logo from "../public/Logo.svg";
-import Maps from "../public/Maps.png";
+import { useState } from "react";
+import Clipboard from "../public/Clipboard.png";
 import Emoji from "../public/Emoji.png";
 import Gifs from "../public/Gifs.png";
-import Clipboard from "../public/Clipboard.png";
-import WindowManagement from "../public/WindowManagement.png";
+import Logo from "../public/Logo.svg";
+import Maps from "../public/Maps.png";
 import Scratchpad from "../public/Scratchpad.png";
-import Head from "next/head";
-import { useState } from "react";
+import TinySol from "../public/TinySol2.png";
+import WindowManagement from "../public/WindowManagement.png";
 
 export default function Home() {
   const [isCopied, setIsCopied] = useState(false);
@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Sol - open source macOS launcher</title>
+        <title>Sol - Open Source macOS launcher</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="Sol" />
@@ -36,32 +36,37 @@ export default function Home() {
         />
       </Head>
 
-      <div className="py-3 px-6 mx-auto w-full max-w-3xl flex sticky top-0 bg-black bg-opacity-60 bg-clip-padding backdrop-filter backdrop-blur-sm z-10">
+      <div className=" w-full flex sticky top-0 bg-black bg-opacity-60 bg-clip-padding backdrop-filter backdrop-blur-sm z-10 border-b border-neutral-800">
+      <div className="py-3 px-6 mx-auto max-w-3xl flex w-full">
         <Image src={Logo} height={29} width={78} alt="Sol logo" />
         <div className="flex-1" />
         <a
-          className="text-black bg-white px-3 rounded text-sm flex items-center justify-center hover:cursor-pointer hover:text-white border border-white hover:bg-black transition"
+          className="text-white bg-blue-500 px-3 rounded text-sm flex items-center justify-center hover:cursor-pointer hover:bg-blue-300 transition"
           href="https://github.com/ospfranco/sol/tree/main/releases"
         >
           Download
         </a>
       </div>
+      </div>
 
       <div className="mx-auto w-full max-w-3xl py-32 px-6">
-        <h1 className="text-center font-bold text-6xl">More than a launcher</h1>
-        <h4 className="text-xl text-gray-200 text-center max-w-xl mx-auto pt-3">
-          Sol is a command palette, focused on simplicity and speed. It’s open
-          source, free and 100% local.
+        <h1 className="text-center font-bold text-7xl">Spotlight re-imagined</h1>
+        <h4 className="text-2xl text-slate-400 text-center max-w-3xl mx-auto pt-3 tracking-wide font-light">
+          Sol is a command palette, focused on simplicity and speed.
         </h4>
 
-        <div className="py-20">
-          <Preview />
+        <div className="h-64 max-w-3xl relative rounded-xl overflow-hidden border border-neutral-600 mt-44 shadow-2xl shadow-neutral-800 ">
+          <Image src={TinySol} alt="Google maps preview"
+                width="100%"
+                height="100%"
+                layout="fill"
+                objectFit="cover"/>
         </div>
 
-        <h1 className="text-center font-bold text-4xl mt-32">
-          The all-in-one tool
+        <h1 className="text-center font-bold text-6xl mt-60">
+          All-in-one tool
         </h1>
-        <h4 className="text-lg text-gray-200 text-center max-w-lg mx-auto pt-3">
+        <h4 className="text-lg text-slate-400 text-center max-w-lg mx-auto pt-3">
           Sol aims to do the <span className="font-bold">20% of work</span> that
           gets the <span className="font-bold">80% of results</span> (with 1%
           tweaking)
