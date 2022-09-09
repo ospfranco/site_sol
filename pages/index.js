@@ -8,7 +8,6 @@ import Gifs from "../public/Gifs.png";
 import Logo from "../public/Logo.svg";
 import Maps from "../public/Maps.png";
 import Scratchpad from "../public/Scratchpad.png";
-import TinySol from "../public/TinySol2.png";
 import WindowManagement from "../public/WindowManagement.png";
 
 export default function Home() {
@@ -19,230 +18,246 @@ export default function Home() {
   };
 
   return (
-    <div>
-      <Head>
-        <title>Sol - Open Source macOS launcher</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="Sol" />
-        <meta name="twitter:title" content="An open source macOS launcher" />
-        <meta
-          name="twitter:description"
-          content="A macOS launcher focused on simplicity and speed. Free and open source."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.solapp.io/preview.png"
-        />
-      </Head>
+    <div className="main">
+      <div className="content">
+        <Head>
+          <title>Sol - Open Source macOS launcher</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="Sol" />
+          <meta name="twitter:title" content="An open source macOS launcher" />
+          <meta
+            name="twitter:description"
+            content="A macOS launcher focused on simplicity and speed. Free and open source."
+          />
+          <meta
+            name="twitter:image"
+            content="https://www.solapp.io/preview.png"
+          />
+        </Head>
 
-      <div className=" w-full flex sticky top-0 bg-black bg-opacity-60 bg-clip-padding backdrop-filter backdrop-blur-sm z-10 border-b border-neutral-800">
-      <div className="py-3 px-6 mx-auto max-w-3xl flex w-full">
-        <Image src={Logo} height={29} width={78} alt="Sol logo" />
-        <div className="flex-1" />
+        <div className=" w-full flex sticky top-0 bg-black bg-opacity-60 bg-clip-padding backdrop-filter backdrop-blur-sm z-10 border-b border-neutral-800">
+          <div className="py-3 px-6 mx-auto max-w-3xl flex w-full">
+            <Image src={Logo} height={29} width={78} alt="Sol logo" />
+            <div className="flex-1" />
+            <a
+              className="text-white bg-blue-500 px-3 rounded text-sm flex items-center justify-center hover:cursor-pointer hover:bg-blue-300 transition"
+              href="https://github.com/ospfranco/sol/tree/main/releases"
+            >
+              Download
+            </a>
+          </div>
+        </div>
+
+        <div className="mx-auto w-full max-w-3xl py-32 px-6">
+          <h1 className="text-center font-bold text-7xl">
+            Spotlight re-imagined
+          </h1>
+          <h4 className="text-2xl text-slate-400 text-center max-w-3xl mx-auto pt-3 tracking-wide font-light">
+            Sol is a command palette, focused on simplicity and speed.
+          </h4>
+
+          <div className="relative h-56">
+            <div className="absolute top-20 h-48 w-[600px] rounded-full mix-blend-multiply filter blur-3xl bg-orange-500 opacity-30" />
+            <div className="absolute top-20 right-0 h-48 w-[600px] rounded-full mix-blend-multiply filter blur-3xl bg-blue-500 opacity-30" />
+            <img
+              alt="Sol preview"
+              src={"/TinySol.png"}
+              className="absolute top-20 rounded"
+              // width="100%"
+              // height="100%"
+              // layout="fill"
+              // objectFit="cover"
+              // className="absolute"
+            />
+          </div>
+          {/* <div className="h-64 max-w-3xl relative rounded-xl overflow-hidden border border-neutral-600 mt-44"> */}
+          {/* </div> */}
+
+          <h1 className="text-center font-bold text-6xl mt-60">
+            All-in-one tool
+          </h1>
+          <h4 className="text-lg text-slate-400 text-center max-w-lg mx-auto pt-3">
+            Sol aims to do the <span className="font-bold">20% of work</span>{" "}
+            that gets the <span className="font-bold">80% of results</span>{" "}
+            (with 1% tweaking)
+          </h4>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 py-20">
+            <div className="rounded-lg bg-neutral-800 overflow-hidden">
+              <div className="h-32 relative">
+                <Image
+                  src={Maps}
+                  alt="Google maps preview"
+                  width="100%"
+                  height="100%"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+              <div className="px-6 py-5">
+                <h5 className="">Google Maps</h5>
+                <p className="mt-1 text-sm text-gray-400">
+                  Quickly lookup adresses
+                </p>
+              </div>
+            </div>
+            <div className="rounded-lg bg-neutral-800 overflow-hidden">
+              <div className="h-32 relative">
+                <Image
+                  src={Emoji}
+                  alt="Emoji picker preview"
+                  width="100%"
+                  height="100%"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+              <div className="px-6 py-5">
+                <h5 className="">Emoji Picker</h5>
+                <p className="mt-1 text-sm text-gray-400">
+                  Faster and more reliable
+                </p>
+              </div>
+            </div>
+            <div className="rounded-lg bg-neutral-800 overflow-hidden">
+              <div className="h-32 relative">
+                <Image
+                  src={Gifs}
+                  alt="Gif picker preview"
+                  width="100%"
+                  height="100%"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+              <div className="px-6 py-5">
+                <h5 className="">Gif Picker</h5>
+                <p className="mt-1 text-sm text-gray-400">
+                  Find that perfect Gif
+                </p>
+              </div>
+            </div>
+            <div className="rounded-lg bg-neutral-800 overflow-hidden">
+              <div className="h-32 relative">
+                <Image
+                  src={Clipboard}
+                  alt="Clipboard picker preview"
+                  width="100%"
+                  height="100%"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+              <div className="px-6 py-5">
+                <h5 className="">Clipboard Manager</h5>
+                <p className="mt-1 text-sm text-gray-400">
+                  Never lose copied text
+                </p>
+              </div>
+            </div>
+            <div className="rounded-lg bg-neutral-800 overflow-hidden">
+              <div className="h-32 relative">
+                <Image
+                  src={WindowManagement}
+                  alt="Window management picker preview"
+                  width="100%"
+                  height="100%"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+              <div className="px-6 py-5">
+                <h5 className="">Window Manager</h5>
+                <p className="mt-1 text-sm text-gray-400">
+                  Quickly organize your desktop
+                </p>
+              </div>
+            </div>
+            <div className="rounded-lg bg-neutral-800 overflow-hidden">
+              <div className="h-32 relative">
+                <Image
+                  src={Scratchpad}
+                  alt="Scratchpad picker preview"
+                  width="100%"
+                  height="100%"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+              <div className="px-6 py-5">
+                <h5 className="">Note Scratchpad</h5>
+                <p className="mt-1 text-sm text-gray-400">
+                  Take a note from anywhere
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h1 className="text-center font-bold text-5xl mt-10">
+          Loved by the community
+        </h1>
+        <div className="flex justify-center py-10">
+          <a
+            href="https://www.producthunt.com/posts/sol-2?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-sol&#0045;2"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=336659&theme=dark&period=daily"
+              alt="Sol - Open&#0032;source&#0032;macOS&#0032;command&#0032;palette | Product Hunt"
+              style={{ width: "250px", height: "54px" }}
+              width="250"
+              height="54"
+            />
+          </a>
+        </div>
+        <h4 className="text-lg text-gray-200 text-center max-w-lg mx-auto pt-3">
+          There is no need to monetize your data, this is a passion project,
+          trying to reach the potential of what computers can do.
+        </h4>
+
+        <h1 className="text-center font-bold text-5xl mt-32">Get it now</h1>
+
         <a
-          className="text-white bg-blue-500 px-3 rounded text-sm flex items-center justify-center hover:cursor-pointer hover:bg-blue-300 transition"
+          className="text-black bg-white px-3 rounded flex items-center justify-center w-44 mx-auto py-3 mt-12 hover:cursor-pointer hover:text-white border border-white hover:bg-black transition"
           href="https://github.com/ospfranco/sol/tree/main/releases"
         >
           Download
         </a>
-      </div>
-      </div>
-
-      <div className="mx-auto w-full max-w-3xl py-32 px-6">
-        <h1 className="text-center font-bold text-7xl">Spotlight re-imagined</h1>
-        <h4 className="text-2xl text-slate-400 text-center max-w-3xl mx-auto pt-3 tracking-wide font-light">
-          Sol is a command palette, focused on simplicity and speed.
+        <h4 className="text-gray-200 text-center max-w-lg mx-auto mt-10">
+          or if you are terminal warlock
         </h4>
-
-        <div className="h-64 max-w-3xl relative rounded-xl overflow-hidden border border-neutral-600 mt-44 shadow-2xl shadow-neutral-800 ">
-          <Image src={TinySol} alt="Google maps preview"
-                width="100%"
-                height="100%"
-                layout="fill"
-                objectFit="cover"/>
-        </div>
-
-        <h1 className="text-center font-bold text-6xl mt-60">
-          All-in-one tool
-        </h1>
-        <h4 className="text-lg text-slate-400 text-center max-w-lg mx-auto pt-3">
-          Sol aims to do the <span className="font-bold">20% of work</span> that
-          gets the <span className="font-bold">80% of results</span> (with 1%
-          tweaking)
-        </h4>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 py-20">
-          <div className="rounded-lg bg-neutral-800 overflow-hidden">
-            <div className="h-32 relative">
-              <Image
-                src={Maps}
-                alt="Google maps preview"
-                width="100%"
-                height="100%"
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-            <div className="px-6 py-5">
-              <h5 className="">Google Maps</h5>
-              <p className="mt-1 text-sm text-gray-400">
-                Quickly lookup adresses
-              </p>
-            </div>
-          </div>
-          <div className="rounded-lg bg-neutral-800 overflow-hidden">
-            <div className="h-32 relative">
-              <Image
-                src={Emoji}
-                alt="Emoji picker preview"
-                width="100%"
-                height="100%"
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-            <div className="px-6 py-5">
-              <h5 className="">Emoji Picker</h5>
-              <p className="mt-1 text-sm text-gray-400">
-                Faster and more reliable
-              </p>
-            </div>
-          </div>
-          <div className="rounded-lg bg-neutral-800 overflow-hidden">
-            <div className="h-32 relative">
-              <Image
-                src={Gifs}
-                alt="Gif picker preview"
-                width="100%"
-                height="100%"
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-            <div className="px-6 py-5">
-              <h5 className="">Gif Picker</h5>
-              <p className="mt-1 text-sm text-gray-400">
-                Find that perfect Gif
-              </p>
-            </div>
-          </div>
-          <div className="rounded-lg bg-neutral-800 overflow-hidden">
-            <div className="h-32 relative">
-              <Image
-                src={Clipboard}
-                alt="Clipboard picker preview"
-                width="100%"
-                height="100%"
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-            <div className="px-6 py-5">
-              <h5 className="">Clipboard Manager</h5>
-              <p className="mt-1 text-sm text-gray-400">
-                Never lose copied text
-              </p>
-            </div>
-          </div>
-          <div className="rounded-lg bg-neutral-800 overflow-hidden">
-            <div className="h-32 relative">
-              <Image
-                src={WindowManagement}
-                alt="Window management picker preview"
-                width="100%"
-                height="100%"
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-            <div className="px-6 py-5">
-              <h5 className="">Window Manager</h5>
-              <p className="mt-1 text-sm text-gray-400">
-                Quickly organize your desktop
-              </p>
-            </div>
-          </div>
-          <div className="rounded-lg bg-neutral-800 overflow-hidden">
-            <div className="h-32 relative">
-              <Image
-                src={Scratchpad}
-                alt="Scratchpad picker preview"
-                width="100%"
-                height="100%"
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-            <div className="px-6 py-5">
-              <h5 className="">Note Scratchpad</h5>
-              <p className="mt-1 text-sm text-gray-400">
-                Take a note from anywhere
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <h1 className="text-center font-bold text-5xl mt-10">
-        Loved by the community
-      </h1>
-      <div className="flex justify-center py-10">
-        <a
-          href="https://www.producthunt.com/posts/sol-2?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-sol&#0045;2"
-          target="_blank"
-          rel="noreferrer"
+        <div
+          className="border bg-neutral-900 border-neutral-800 w-64 mx-auto text-center h-10 rounded mt-10 text-neutral-400 cursor-pointer group hover:border-white transition flex flex-col justify-center align-center"
+          onClick={copyCommand}
         >
-          <img
-            src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=336659&theme=dark&period=daily"
-            alt="Sol - Open&#0032;source&#0032;macOS&#0032;command&#0032;palette | Product Hunt"
-            style={{ width: "250px", height: "54px" }}
-            width="250"
-            height="54"
-          />
-        </a>
-      </div>
-      <h4 className="text-lg text-gray-200 text-center max-w-lg mx-auto pt-3">
-        There is no need to monetize your data, this is a passion project,
-        trying to reach the potential of what computers can do.
-      </h4>
-
-      <h1 className="text-center font-bold text-5xl mt-32">Get it now</h1>
-
-      <a
-        className="text-black bg-white px-3 rounded flex items-center justify-center w-44 mx-auto py-3 mt-12 hover:cursor-pointer hover:text-white border border-white hover:bg-black transition"
-        href="https://github.com/ospfranco/sol/tree/main/releases"
-      >
-        Download
-      </a>
-      <h4 className="text-gray-200 text-center max-w-lg mx-auto mt-10">
-        or if you are terminal warlock
-      </h4>
-      <div
-        className="border bg-neutral-900 border-neutral-800 w-64 mx-auto text-center h-10 rounded mt-10 text-neutral-400 cursor-pointer group hover:border-white transition flex flex-col justify-center align-center"
-        onClick={copyCommand}
-      >
-        <p className="group-hover:hidden">brew install --cask sol</p>
-        <p className="hidden group-hover:block text-white">
-          {isCopied ? "Copied" : "Click to copy"}
-        </p>
-      </div>
-      <h4 className="text-gray-200 text-center max-w-lg mx-auto mt-10">
-        or, even better, <span className="font-bold">contribute!</span>
-      </h4>
-
-      <a
-        className="border px-3 rounded flex items-center justify-center w-44 mx-auto py-3 mt-6 border-neutral-400 hover:border-white transition cursor-pointer"
-        href="https://github.com/ospfranco/sol"
-      >
-        Source
-      </a>
-
-      <div className="bg-neutral-900 p-6 mt-32">
-        <div className="py-3 mx-auto w-full max-w-3xl">
-          <p className="text-center text-neutral-200 text-sm">
-            Built by <span className="font-bold">Oscar Franco</span>
+          <p className="group-hover:hidden">brew install --cask sol</p>
+          <p className="hidden group-hover:block text-white">
+            {isCopied ? "Copied" : "Click to copy"}
           </p>
+        </div>
+        <h4 className="text-gray-200 text-center max-w-lg mx-auto mt-10">
+          or, even better, <span className="font-bold">contribute!</span>
+        </h4>
+
+        <a
+          className="border px-3 rounded flex items-center justify-center w-44 mx-auto py-3 mt-6 border-neutral-400 hover:border-white transition cursor-pointer"
+          href="https://github.com/ospfranco/sol"
+        >
+          Source
+        </a>
+
+        <div className="bg-neutral-900 p-6 mt-32">
+          <div className="py-3 mx-auto w-full max-w-3xl">
+            <p className="text-center text-neutral-200 text-sm">
+              Built by <span className="font-bold">Oscar Franco</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>

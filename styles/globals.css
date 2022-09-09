@@ -12,6 +12,36 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+.content {
+  z-index: 3;
+  position: relative;
+}
+
+.main {
+  position: relative;
+}
+
+.main::before {
+  background: radial-gradient(circle,rgba(2,0,36,0) 0,black 100%);
+    z-index: 2;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.main::after {
+  content: '';
+  background-image: url("/grid.svg");
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.5;
+  z-index: 1;
+}
+
 a {
   color: inherit;
   text-decoration: none;
