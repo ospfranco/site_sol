@@ -2,6 +2,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
+import { Preview } from "../components/preview.component";
 import Clipboard from "../public/Clipboard.png";
 import Emoji from "../public/Emoji.png";
 import Gifs from "../public/Gifs.png";
@@ -39,7 +40,7 @@ export default function Home() {
           />
         </Head>
 
-        <div className=" w-full flex sticky top-0 bg-black bg-opacity-60 bg-clip-padding backdrop-filter backdrop-blur-sm z-10 border-b border-neutral-800">
+        <div className=" w-full flex sticky top-0 bg-black bg-opacity-60 bg-clip-padding backdrop-filter backdrop-blur-sm z-10 border-b border-neutral-900">
           <div className="py-3 px-6 mx-auto max-w-3xl flex w-full">
             <Image src={Logo} height={29} width={78} alt="Sol logo" />
             <div className="flex-1" />
@@ -53,29 +54,18 @@ export default function Home() {
         </div>
 
         <div className="mx-auto w-full max-w-3xl py-32 px-6">
-          <h1 className="text-center font-bold text-7xl">
+          <h1 className="text-center font-bold text-3xl lg:text-7xl">
             Spotlight re-imagined
           </h1>
-          <h4 className="text-2xl text-slate-400 text-center max-w-3xl mx-auto pt-3 tracking-wide font-light">
+          <h4 className="text-xl lg:text-2xl text-slate-400 text-center max-w-3xl mx-auto pt-3 tracking-wide font-light">
             Sol is a command palette, focused on simplicity and speed.
           </h4>
 
-          <div className="relative h-56">
-            <div className="absolute top-20 h-48 w-[600px] rounded-full mix-blend-multiply filter blur-3xl bg-orange-500 opacity-30" />
-            <div className="absolute top-20 right-0 h-48 w-[600px] rounded-full mix-blend-multiply filter blur-3xl bg-blue-500 opacity-30" />
-            <img
-              alt="Sol preview"
-              src={"/TinySol.png"}
-              className="absolute top-20 rounded"
-              // width="100%"
-              // height="100%"
-              // layout="fill"
-              // objectFit="cover"
-              // className="absolute"
-            />
+          <div className="relative h-[400px] mt-32">
+            <div className="absolute top-0 bottom-0 -left-10 right-1/2 rounded-full mix-blend-multiply filter blur-3xl bg-purple-500 opacity-20" />
+            <div className="absolute top-0 bottom-0 -right-10 left-1/3 rounded-full mix-blend-multiply filter blur-3xl bg-blue-500 opacity-20" />
+            <Preview />
           </div>
-          {/* <div className="h-64 max-w-3xl relative rounded-xl overflow-hidden border border-neutral-600 mt-44"> */}
-          {/* </div> */}
 
           <h1 className="text-center font-bold text-6xl mt-60">
             All-in-one tool
