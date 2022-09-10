@@ -8,6 +8,7 @@ import Emoji from "../public/Emoji.png";
 import Gifs from "../public/Gifs.png";
 import Github from "../public/Github.png";
 import Maps from "../public/Maps.png";
+import osp from "../public/osp.jpeg";
 import Scratchpad from "../public/Scratchpad.png";
 import WindowManagement from "../public/WindowManagement.png";
 
@@ -199,32 +200,18 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
 
-        <h1 className="text-center font-bold text-5xl mt-10">
-          Loved by the community
-        </h1>
-        <div className="flex justify-center py-10">
-          <a
-            href="https://www.producthunt.com/posts/sol-2?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-sol&#0045;2"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=336659&theme=dark&period=daily"
-              alt="Sol - Open&#0032;source&#0032;macOS&#0032;command&#0032;palette | Product Hunt"
-              style={{ width: "250px", height: "54px" }}
-              width="250"
-              height="54"
+          <div className="text-center text-neutral-400 flex flex-row items-center justify-center text-sm pb-12">
+            <div className="mr-1">Built by</div>
+            <Image
+              src={osp}
+              alt="osp"
+              height={18}
+              width={18}
+              objectFit="contain"
+              className="rounded-full"
             />
-          </a>
-        </div>
-
-        <div className="bg-neutral-900 p-6 mt-32">
-          <div className="py-3 mx-auto w-full max-w-3xl">
-            <p className="text-center text-neutral-200 text-sm">
-              Built by <span className="font-bold">Oscar Franco</span>
-            </p>
+            <span className="font-semibold text-white ml-1">ospfranco</span>
           </div>
         </div>
       </div>
