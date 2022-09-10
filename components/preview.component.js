@@ -10,7 +10,7 @@ import xcode from "../public/xcode.png";
 
 export const Preview = () => {
   return (
-    <div className="border border-neutral-800 rounded-xl bg-neutral-900 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60 overflow-hidden">
+    <div className="border border-neutral-700 rounded-xl bg-neutral-900 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-80 overflow-hidden">
       <p className="text-neutral-600 text-lg p-3">Type to search...</p>
       <div className="w-full border-b border-white border-opacity-5" />
       <div className="px-3">
@@ -115,7 +115,7 @@ export const Preview = () => {
           <div className="flex-1" />
           <p className="font-semibold text-xs">Open</p>
           <div className="text-xs bg-blue-500 rounded-sm rounded-br-[6px] px-2 ml-2">
-            R
+            ⏎
           </div>
         </div>
       </div>

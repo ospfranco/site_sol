@@ -6,7 +6,7 @@ import { Preview } from "../components/preview.component";
 import Clipboard from "../public/Clipboard.png";
 import Emoji from "../public/Emoji.png";
 import Gifs from "../public/Gifs.png";
-import Logo from "../public/Logo.svg";
+import Github from "../public/Github.png";
 import Maps from "../public/Maps.png";
 import Scratchpad from "../public/Scratchpad.png";
 import WindowManagement from "../public/WindowManagement.png";
@@ -19,170 +19,183 @@ export default function Home() {
   };
 
   return (
-    <div className="main">
-      <div className="content">
-        <Head>
-          <title>Sol - Open Source macOS launcher</title>
-          <meta
-            name="viewport"
-            content="initial-scale=1.0, width=device-width"
-          />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="Sol" />
-          <meta name="twitter:title" content="An open source macOS launcher" />
-          <meta
-            name="twitter:description"
-            content="A macOS launcher focused on simplicity and speed. Free and open source."
-          />
-          <meta
-            name="twitter:image"
-            content="https://www.solapp.io/preview.png"
-          />
-        </Head>
+    <>
+      <Head>
+        <title>Open Source macOS Launcher</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="Sol" />
+        <meta name="twitter:title" content="An open source macOS launcher" />
+        <meta
+          name="twitter:description"
+          content="macOS launcher focused on simplicity and speed. Free and open source."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.solapp.io/preview.png"
+        />
+      </Head>
 
-        <div className=" w-full flex sticky top-0 bg-black bg-opacity-60 bg-clip-padding backdrop-filter backdrop-blur-sm z-10 border-b border-neutral-900">
-          <div className="py-3 px-6 mx-auto max-w-3xl flex w-full">
-            <Image src={Logo} height={29} width={78} alt="Sol logo" />
-            <div className="flex-1" />
-            <a
-              className="text-white bg-blue-500 px-3 rounded text-sm flex items-center justify-center hover:cursor-pointer hover:bg-blue-300 transition"
-              href="https://github.com/ospfranco/sol/tree/main/releases"
-            >
-              Download
-            </a>
+      <div className="main">
+        <div className="content">
+          <div className="mx-auto w-full max-w-3xl py-32 px-6">
+            <div className="flex flex-row">
+              <h1 className="text-3xl font-bold flex-1">Sol</h1>
+              <a href="https://github.com/ospfranco/sol">
+                <div className="bg-neutral-900 rounded-full px-4 py-2 flex flex-row">
+                  <Image
+                    src={Github}
+                    alt="Githublogo"
+                    height={8}
+                    width={14}
+                    objectFit="contain"
+                  />
+                  <p className="text-neutral-300 ml-2 text-sm">ospfranco/sol</p>
+                </div>
+              </a>
+            </div>
+            <h4 className="text-neutral-400">
+              Open source launcher focused on ease-of-use and speed.
+            </h4>
+
+            <div className="relative h-[500px] mt-20">
+              <div className="absolute top-0 bottom-0 -left-10 right-1/3 rounded-full mix-blend-multiply filter blur-3xl bg-purple-400 opacity-10" />
+              <div className="absolute top-0 bottom-0 -right-10 left-1/3 rounded-full mix-blend-multiply filter blur-3xl bg-blue-400 opacity-10" />
+              <Preview />
+            </div>
+
+            <div className="flex flex-row gap-3 items-center mt-8 text-sm justify-center">
+              <a
+                className="bg-neutral-700 border-neutral-700 bg-opacity-50 rounded-full px-6 py-2 text-neutral-300 hover:text-white text-xs font-mono  cursor-copy"
+                onMouseDown={() => {
+                  navigator.clipboard.writeText("brew install --cask sol");
+                }}
+              >
+                brew install --cask sol
+              </a>
+              <p className="text-gray-500">or</p>
+              <a
+                className="text-blue-500 cursor-pointer"
+                href="https://github.com/ospfranco/sol/tree/main/releases"
+              >
+                Download
+              </a>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div className="mx-auto w-full max-w-3xl py-32 px-6">
-          <h1 className="text-center font-bold text-3xl lg:text-7xl">
-            Spotlight re-imagined
-          </h1>
-          <h4 className="text-xl lg:text-2xl text-slate-400 text-center max-w-3xl mx-auto pt-3 tracking-wide font-light">
-            Sol is a command palette, focused on simplicity and speed.
-          </h4>
-
-          <div className="relative h-[400px] mt-32">
-            <div className="absolute top-0 bottom-0 -left-10 right-1/2 rounded-full mix-blend-multiply filter blur-3xl bg-purple-500 opacity-20" />
-            <div className="absolute top-0 bottom-0 -right-10 left-1/3 rounded-full mix-blend-multiply filter blur-3xl bg-blue-500 opacity-20" />
-            <Preview />
-          </div>
-
-          <h1 className="text-center font-bold text-6xl mt-60">
-            All-in-one tool
-          </h1>
-          <h4 className="text-lg text-slate-400 text-center max-w-lg mx-auto pt-3">
-            Sol aims to do the <span className="font-bold">20% of work</span>{" "}
-            that gets the <span className="font-bold">80% of results</span>{" "}
-            (with 1% tweaking)
-          </h4>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 py-20">
-            <div className="rounded-lg bg-neutral-800 overflow-hidden">
-              <div className="h-32 relative">
-                <Image
-                  src={Maps}
-                  alt="Google maps preview"
-                  width="100%"
-                  height="100%"
-                  layout="fill"
-                  objectFit="cover"
-                />
+      <div className="main">
+        <div className="content">
+          <div className="mx-auto w-full max-w-3xl py-32 px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 py-8">
+              <div className="rounded-lg bg-neutral-800 bg-opacity-30 overflow-hidden">
+                <div className="h-32 relative">
+                  <Image
+                    src={Maps}
+                    alt="Google maps preview"
+                    width="100%"
+                    height="100%"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+                <div className="px-6 py-5">
+                  <h5 className="">Google Maps</h5>
+                  <p className="mt-1 text-sm text-gray-400">
+                    Quickly lookup adresses
+                  </p>
+                </div>
               </div>
-              <div className="px-6 py-5">
-                <h5 className="">Google Maps</h5>
-                <p className="mt-1 text-sm text-gray-400">
-                  Quickly lookup adresses
-                </p>
+              <div className="rounded-lg bg-neutral-800 bg-opacity-30 overflow-hidden">
+                <div className="h-32 relative">
+                  <Image
+                    src={Emoji}
+                    alt="Emoji picker preview"
+                    width="100%"
+                    height="100%"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+                <div className="px-6 py-5">
+                  <h5 className="">Emoji Picker</h5>
+                  <p className="mt-1 text-sm text-gray-400">
+                    Faster and more reliable
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="rounded-lg bg-neutral-800 overflow-hidden">
-              <div className="h-32 relative">
-                <Image
-                  src={Emoji}
-                  alt="Emoji picker preview"
-                  width="100%"
-                  height="100%"
-                  layout="fill"
-                  objectFit="cover"
-                />
+              <div className="rounded-lg bg-neutral-800 bg-opacity-30 overflow-hidden">
+                <div className="h-32 relative">
+                  <Image
+                    src={Gifs}
+                    alt="Gif picker preview"
+                    width="100%"
+                    height="100%"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+                <div className="px-6 py-5">
+                  <h5 className="">Gif Picker</h5>
+                  <p className="mt-1 text-sm text-gray-400">
+                    Find that perfect Gif
+                  </p>
+                </div>
               </div>
-              <div className="px-6 py-5">
-                <h5 className="">Emoji Picker</h5>
-                <p className="mt-1 text-sm text-gray-400">
-                  Faster and more reliable
-                </p>
+              <div className="rounded-lg bg-neutral-800 bg-opacity-30 overflow-hidden">
+                <div className="h-32 relative">
+                  <Image
+                    src={Clipboard}
+                    alt="Clipboard picker preview"
+                    width="100%"
+                    height="100%"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+                <div className="px-6 py-5">
+                  <h5 className="">Clipboard Manager</h5>
+                  <p className="mt-1 text-sm text-gray-400">
+                    Never lose copied text
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="rounded-lg bg-neutral-800 overflow-hidden">
-              <div className="h-32 relative">
-                <Image
-                  src={Gifs}
-                  alt="Gif picker preview"
-                  width="100%"
-                  height="100%"
-                  layout="fill"
-                  objectFit="cover"
-                />
+              <div className="rounded-lg bg-neutral-800 bg-opacity-30 overflow-hidden">
+                <div className="h-32 relative">
+                  <Image
+                    src={WindowManagement}
+                    alt="Window management picker preview"
+                    width="100%"
+                    height="100%"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+                <div className="px-6 py-5">
+                  <h5 className="">Window Manager</h5>
+                  <p className="mt-1 text-sm text-gray-400">
+                    Quickly organize your desktop
+                  </p>
+                </div>
               </div>
-              <div className="px-6 py-5">
-                <h5 className="">Gif Picker</h5>
-                <p className="mt-1 text-sm text-gray-400">
-                  Find that perfect Gif
-                </p>
-              </div>
-            </div>
-            <div className="rounded-lg bg-neutral-800 overflow-hidden">
-              <div className="h-32 relative">
-                <Image
-                  src={Clipboard}
-                  alt="Clipboard picker preview"
-                  width="100%"
-                  height="100%"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
-              <div className="px-6 py-5">
-                <h5 className="">Clipboard Manager</h5>
-                <p className="mt-1 text-sm text-gray-400">
-                  Never lose copied text
-                </p>
-              </div>
-            </div>
-            <div className="rounded-lg bg-neutral-800 overflow-hidden">
-              <div className="h-32 relative">
-                <Image
-                  src={WindowManagement}
-                  alt="Window management picker preview"
-                  width="100%"
-                  height="100%"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
-              <div className="px-6 py-5">
-                <h5 className="">Window Manager</h5>
-                <p className="mt-1 text-sm text-gray-400">
-                  Quickly organize your desktop
-                </p>
-              </div>
-            </div>
-            <div className="rounded-lg bg-neutral-800 overflow-hidden">
-              <div className="h-32 relative">
-                <Image
-                  src={Scratchpad}
-                  alt="Scratchpad picker preview"
-                  width="100%"
-                  height="100%"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
-              <div className="px-6 py-5">
-                <h5 className="">Note Scratchpad</h5>
-                <p className="mt-1 text-sm text-gray-400">
-                  Take a note from anywhere
-                </p>
+              <div className="rounded-lg bg-neutral-800 bg-opacity-30 overflow-hidden">
+                <div className="h-32 relative">
+                  <Image
+                    src={Scratchpad}
+                    alt="Scratchpad picker preview"
+                    width="100%"
+                    height="100%"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+                <div className="px-6 py-5">
+                  <h5 className="">Note Scratchpad</h5>
+                  <p className="mt-1 text-sm text-gray-400">
+                    Take a note from anywhere
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -206,41 +219,6 @@ export default function Home() {
             />
           </a>
         </div>
-        <h4 className="text-lg text-gray-200 text-center max-w-lg mx-auto pt-3">
-          There is no need to monetize your data, this is a passion project,
-          trying to reach the potential of what computers can do.
-        </h4>
-
-        <h1 className="text-center font-bold text-5xl mt-32">Get it now</h1>
-
-        <a
-          className="text-black bg-white px-3 rounded flex items-center justify-center w-44 mx-auto py-3 mt-12 hover:cursor-pointer hover:text-white border border-white hover:bg-black transition"
-          href="https://github.com/ospfranco/sol/tree/main/releases"
-        >
-          Download
-        </a>
-        <h4 className="text-gray-200 text-center max-w-lg mx-auto mt-10">
-          or if you are terminal warlock
-        </h4>
-        <div
-          className="border bg-neutral-900 border-neutral-800 w-64 mx-auto text-center h-10 rounded mt-10 text-neutral-400 cursor-pointer group hover:border-white transition flex flex-col justify-center align-center"
-          onClick={copyCommand}
-        >
-          <p className="group-hover:hidden">brew install --cask sol</p>
-          <p className="hidden group-hover:block text-white">
-            {isCopied ? "Copied" : "Click to copy"}
-          </p>
-        </div>
-        <h4 className="text-gray-200 text-center max-w-lg mx-auto mt-10">
-          or, even better, <span className="font-bold">contribute!</span>
-        </h4>
-
-        <a
-          className="border px-3 rounded flex items-center justify-center w-44 mx-auto py-3 mt-6 border-neutral-400 hover:border-white transition cursor-pointer"
-          href="https://github.com/ospfranco/sol"
-        >
-          Source
-        </a>
 
         <div className="bg-neutral-900 p-6 mt-32">
           <div className="py-3 mx-auto w-full max-w-3xl">
@@ -250,6 +228,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
