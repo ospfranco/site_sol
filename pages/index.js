@@ -6,7 +6,6 @@ import { Preview } from "../components/preview.component";
 import Clipboard from "../public/Clipboard.png";
 import Emoji from "../public/Emoji.png";
 import Gifs from "../public/Gifs.png";
-import Github from "../public/Github.png";
 import Maps from "../public/Maps.png";
 import osp from "../public/osp.jpeg";
 import Scratchpad from "../public/Scratchpad.png";
@@ -22,14 +21,17 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Open Source macOS Launcher</title>
+        <title>SOL - MacOS Launcher</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="Sol" />
-        <meta name="twitter:title" content="An open source macOS launcher" />
+        <meta
+          name="twitter:title"
+          content="An simple and fast macOS launcher"
+        />
         <meta
           name="twitter:description"
-          content="macOS launcher focused on simplicity and speed. Free and open source."
+          content="macOS launcher focused on simplicity and speed."
         />
         <meta
           name="twitter:image"
@@ -39,27 +41,13 @@ export default function Home() {
 
       <div className="main">
         <div className="content">
-          <div className="mx-auto w-full max-w-3xl py-32 px-6">
-            <div className="flex flex-row">
-              <h1 className="text-3xl font-bold flex-1">Sol</h1>
-              <a href="https://github.com/ospfranco/sol">
-                <div className="bg-neutral-900 rounded-full px-4 py-2 flex flex-row">
-                  <Image
-                    src={Github}
-                    alt="Githublogo"
-                    height={8}
-                    width={14}
-                    objectFit="contain"
-                  />
-                  <p className="text-neutral-300 ml-2 text-sm">ospfranco/sol</p>
-                </div>
-              </a>
-            </div>
-            <h4 className="text-neutral-400">
-              Open source launcher focused on ease-of-use and speed.
+          <div className="mx-auto w-full max-w-3xl py-32 px-6 items-center flex flex-col">
+            <img src="/SOL.svg" alt="Sol logo" className="h-8" />
+            <h4 className="text-neutral-300 mt-4 text-xl">
+              MacOS auncher focused on ease-of-use and speed
             </h4>
 
-            <div className="relative h-[500px] mt-20">
+            <div className="relative h-[500px] mt-20 w-full">
               <div className="absolute top-0 bottom-0 -left-10 right-1/3 rounded-full mix-blend-multiply filter blur-3xl bg-purple-400 opacity-10" />
               <div className="absolute top-0 bottom-0 -right-10 left-1/3 rounded-full mix-blend-multiply filter blur-3xl bg-blue-400 opacity-10" />
               <Preview />
@@ -74,13 +62,26 @@ export default function Home() {
               >
                 brew install --cask sol
               </a>
-              <p className="text-gray-500">or</p>
+              <p className="text-gray-300">or</p>
               <a
                 className="text-blue-500 cursor-pointer"
                 href="https://github.com/ospfranco/sol/tree/main/releases"
               >
                 Download
               </a>
+            </div>
+
+            <div className="text-center text-neutral-300 flex flex-row items-center justify-center text-sm pb-12 mt-8">
+              <div className="mr-1">Built by</div>
+              <Image
+                src={osp}
+                alt="osp"
+                height={18}
+                width={18}
+                objectFit="contain"
+                className="rounded-full"
+              />
+              <span className="font-semibold text-white ml-1">ospfranco</span>
             </div>
           </div>
         </div>
@@ -199,19 +200,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="text-center text-neutral-400 flex flex-row items-center justify-center text-sm pb-12">
-            <div className="mr-1">Built by</div>
-            <Image
-              src={osp}
-              alt="osp"
-              height={18}
-              width={18}
-              objectFit="contain"
-              className="rounded-full"
-            />
-            <span className="font-semibold text-white ml-1">ospfranco</span>
           </div>
         </div>
       </div>
