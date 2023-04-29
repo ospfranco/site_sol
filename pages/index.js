@@ -10,6 +10,7 @@ import Maps from "../public/Maps.png";
 import osp from "../public/osp.jpeg";
 import Scratchpad from "../public/Scratchpad.png";
 import WindowManagement from "../public/WindowManagement.png";
+import Header from "../public/header2.png";
 
 export default function Home() {
   const [isCopied, setIsCopied] = useState(false);
@@ -42,15 +43,19 @@ export default function Home() {
       <div className="main">
         <div className="content">
           <div className="mx-auto w-full max-w-3xl py-32 px-6 items-center flex flex-col">
-            <img src="/SOL.svg" alt="Sol logo" className="h-8" />
-            <h4 className="text-neutral-300 mt-4 text-xl">
-              MacOS auncher focused on ease-of-use and speed
-            </h4>
+            {/* <img src="/SOL.svg" alt="Sol logo" className="h-8" /> */}
+            <h1 className="text-white mt-4 text-6xl text-center font-semibold">
+              Sol is a new way to interact with your Mac
+            </h1>
+            <h2 className="text-neutral-300 mt-4 text-xl text-center max-w-lg">
+              MacOS is great, but it can be better. Sol fills the gaps and makes your Mac more productive.
+            </h2>
 
             <div className="relative h-[500px] mt-20 w-full">
-              <div className="absolute top-0 bottom-0 -left-10 right-1/3 rounded-full mix-blend-multiply filter blur-3xl bg-purple-400 opacity-10" />
-              <div className="absolute top-0 bottom-0 -right-10 left-1/3 rounded-full mix-blend-multiply filter blur-3xl bg-blue-400 opacity-10" />
-              <Preview />
+              <div className="absolute top-0 bottom-0 -left-10 right-1/3 rounded-full mix-blend-multiply filter blur-3xl bg-purple-400 opacity-50" />
+              <div className="absolute top-0 bottom-0 -right-10 left-1/3 rounded-full mix-blend-multiply filter blur-3xl bg-blue-400 opacity-50" />
+              <Image src={Header} alt="Sol preview" layout="fill" />
+              {/* <Preview /> */}
             </div>
 
             <div className="flex flex-row gap-3 items-center mt-8 text-sm justify-center">
