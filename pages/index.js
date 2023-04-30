@@ -7,10 +7,9 @@ import Clipboard from "../public/Clipboard.png";
 import Emoji from "../public/Emoji.png";
 import Gifs from "../public/Gifs.png";
 import Maps from "../public/Maps.png";
-import osp from "../public/osp.jpeg";
+import osp from "../public/osp.png";
 import Scratchpad from "../public/Scratchpad.png";
 import WindowManagement from "../public/WindowManagement.png";
-import Header from "../public/header2.png";
 
 export default function Home() {
   const [isCopied, setIsCopied] = useState(false);
@@ -47,15 +46,14 @@ export default function Home() {
             <h1 className="text-white mt-4 text-6xl text-center font-semibold">
               Sol is a new way to interact with your Mac
             </h1>
-            <h2 className="text-neutral-300 mt-4 text-xl text-center max-w-lg">
-              MacOS is great, but it can be better. Sol fills the gaps and makes your Mac more productive.
+            <h2 className="text-neutral-300 mt-4 text-xl text-center">
+              Get everything done faster with a simple and beautiful launcher
             </h2>
 
             <div className="relative h-[500px] mt-20 w-full">
-              <div className="absolute top-0 bottom-0 -left-10 right-1/3 rounded-full mix-blend-multiply filter blur-3xl bg-purple-400 opacity-50" />
-              <div className="absolute top-0 bottom-0 -right-10 left-1/3 rounded-full mix-blend-multiply filter blur-3xl bg-blue-400 opacity-50" />
-              <Image src={Header} alt="Sol preview" layout="fill" />
-              {/* <Preview /> */}
+              <div className="absolute top-0 bottom-0 -left-10 right-1/3 rounded-full mix-blend-multiply filter blur-3xl bg-purple-400 opacity-30" />
+              <div className="absolute top-0 bottom-0 -right-10 left-1/3 rounded-full mix-blend-multiply filter blur-3xl bg-blue-400 opacity-30" />
+              <Preview />
             </div>
 
             <div className="flex flex-row gap-3 items-center mt-8 text-sm justify-center">
@@ -69,7 +67,7 @@ export default function Home() {
               </a>
               <p className="text-gray-300">or</p>
               <a
-                className="text-blue-500 cursor-pointer"
+                className="text-white cursor-pointer bg-gradient-to-r from-blue-600 to-blue-400 rounded px-6 py-2 text-xs"
                 href="https://github.com/ospfranco/sol/tree/main/releases"
               >
                 Download
@@ -86,126 +84,31 @@ export default function Home() {
                 objectFit="contain"
                 className="rounded-full"
               />
-              <span className="font-semibold text-white ml-1">ospfranco</span>
+              <a href="www.ospfranco.com">
+                <span className="font-semibold text-white ml-1">ospfranco</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
+      
+      <div className="flex flex-col items-center gap-10 mb-20">
+        <div className="h-[1px] w-[80%] bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 mb-5"/>
+        <div className="flex flex-wrap gap-44">
+          <p className="font-semibold w-52">🚀 Emoji Picker. <span className="text-neutral-400 font-normal">Faster and more reliable than the native picker</span></p>
+          <p className="font-semibold w-52">🪟 Window Manager. <span className="text-neutral-400 font-normal">Resize and move windows with a few keystrokes</span></p>
+          <p className="font-semibold w-52">📋 Clipboard Manager. <span className="text-neutral-400 font-normal">Never loose copied text again</span></p>
 
-      <div className="main">
-        <div className="content">
-          <div className="mx-auto w-full max-w-3xl py-32 px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 py-8">
-              <div className="rounded-lg bg-neutral-800 bg-opacity-30 overflow-hidden">
-                <div className="h-32 relative">
-                  <Image
-                    src={Maps}
-                    alt="Google maps preview"
-                    width="100%"
-                    height="100%"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-                <div className="px-6 py-5">
-                  <h5 className="">Google Maps</h5>
-                  <p className="mt-1 text-sm text-gray-400">
-                    Quickly lookup adresses
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-lg bg-neutral-800 bg-opacity-30 overflow-hidden">
-                <div className="h-32 relative">
-                  <Image
-                    src={Emoji}
-                    alt="Emoji picker preview"
-                    width="100%"
-                    height="100%"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-                <div className="px-6 py-5">
-                  <h5 className="">Emoji Picker</h5>
-                  <p className="mt-1 text-sm text-gray-400">
-                    Faster and more reliable
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-lg bg-neutral-800 bg-opacity-30 overflow-hidden">
-                <div className="h-32 relative">
-                  <Image
-                    src={Gifs}
-                    alt="Gif picker preview"
-                    width="100%"
-                    height="100%"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-                <div className="px-6 py-5">
-                  <h5 className="">Gif Picker</h5>
-                  <p className="mt-1 text-sm text-gray-400">
-                    Find that perfect Gif
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-lg bg-neutral-800 bg-opacity-30 overflow-hidden">
-                <div className="h-32 relative">
-                  <Image
-                    src={Clipboard}
-                    alt="Clipboard picker preview"
-                    width="100%"
-                    height="100%"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-                <div className="px-6 py-5">
-                  <h5 className="">Clipboard Manager</h5>
-                  <p className="mt-1 text-sm text-gray-400">
-                    Never lose copied text
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-lg bg-neutral-800 bg-opacity-30 overflow-hidden">
-                <div className="h-32 relative">
-                  <Image
-                    src={WindowManagement}
-                    alt="Window management picker preview"
-                    width="100%"
-                    height="100%"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-                <div className="px-6 py-5">
-                  <h5 className="">Window Manager</h5>
-                  <p className="mt-1 text-sm text-gray-400">
-                    Quickly organize your desktop
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-lg bg-neutral-800 bg-opacity-30 overflow-hidden">
-                <div className="h-32 relative">
-                  <Image
-                    src={Scratchpad}
-                    alt="Scratchpad picker preview"
-                    width="100%"
-                    height="100%"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-                <div className="px-6 py-5">
-                  <h5 className="">Note Scratchpad</h5>
-                  <p className="mt-1 text-sm text-gray-400">
-                    Take a note from anywhere
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
+        <div className="flex flex-wrap gap-44">
+          <p className="font-semibold w-52">📆 Calendar integration. <span className="text-neutral-400 font-normal">Your calendar accessible all the time</span></p>
+          <p className="font-semibold w-52">📖 Browser Bookmarks. <span className="text-neutral-400 font-normal">Quickly access your browser bookmarks</span></p>
+          <p className="font-semibold w-52">♫ Media key forwarding. <span className="text-neutral-400 font-normal">Send play/pause commands directly to Spotify instead of the video you just opened</span></p>
+        </div>
+        <div className="flex flex-wrap gap-44">
+          <p className="font-semibold w-52">🗣️ Translation. <span className="text-neutral-400 font-normal">Quickly translate between and up to 3 languages</span></p>
+          <p className="font-semibold w-52">🙈 Hide the notch. <span className="text-neutral-400 font-normal">Hide the new macbook pros notch</span></p>
+          <p className="font-semibold w-52">🤓 Developer commands. <span className="text-neutral-400 font-normal">Clean xcode derived data, launch scripts and more</span></p>
         </div>
       </div>
     </>
