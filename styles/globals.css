@@ -6,39 +6,8 @@ html,
 body {
   @apply text-white bg-black p-0 m-0;
   color-scheme: dark;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-.content {
-  z-index: 3;
-  position: relative;
-}
-
-.main {
-  position: relative;
-}
-
-.main::before {
-  background: radial-gradient(circle, rgba(1, 0, 20, 0) 0, black 50%);
-  z-index: 2;
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-}
-
-.main::after {
-  content: "";
-  background-image: url("/grid.svg");
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  opacity: 0.4;
-  z-index: 1;
-}
 
 a {
   color: inherit;
