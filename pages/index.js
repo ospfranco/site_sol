@@ -159,6 +159,44 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/* Third row */}
+        <div className="flex flex-col lg:flex-row lg:flex-wrap gap-4 px-12">
+          <div className="border rounded-3xl p-8 border-gray-800 flex-1 gap-1 flex flex-col h-60 items-center">
+            <p className="text-xl font-semibold">Quick Notes</p>
+            <p className="text-gray-300">
+              Quickly jot down notes and access them later
+            </p>
+            <div className="flex-1" />
+            <div className="flex flex-row gap-2">
+              <Key title="⇧" />
+              <Key title="⌘" />
+              <Key title="space" />
+            </div>
+          </div>
+          <div className="border rounded-3xl p-8 border-gray-800 flex-1 gap-1 flex flex-col h-60">
+            <p className="text-xl font-semibold">Process Killer</p>
+            <p className="text-gray-300">Kill any stuck process quickly</p>
+            <div className="flex-1" />
+            {/* <div className="flex flex-row items-center gap-2">
+              <p>github.com</p>
+              <div className="flex-1" />
+              <Key title="return" primary />
+            </div> */}
+          </div>
+          <div className="border rounded-3xl p-8 border-gray-800 flex-1 gap-1 flex flex-col h-60 items-center">
+            <p className="text-xl font-semibold">Keyboard Shortcuts</p>
+            <p className="text-gray-300">
+              Bind global shortcuts to any action you want
+            </p>
+
+            <div className="flex-1" />
+            {/* <div className="flex flex-row items-center gap-2">
+              <Image src={spotify} height={22} width={22} alt="slack" />
+              <p>Spotify</p>
+            </div> */}
+          </div>
+        </div>
+
         <div className="flex flex-col lg:flex-row lg:flex-wrap gap-4 px-12">
           <div className="border rounded-3xl p-8 border-gray-800 flex-1 gap-1 flex flex-col h-60 items-center">
             <p className="text-xl font-semibold">Translation</p>
@@ -185,7 +223,7 @@ export default function Home() {
           <div className="border rounded-3xl p-8 border-gray-800 flex-1 gap-1 flex flex-col h-60 items-center">
             <p className="text-xl font-semibold">Developer commands</p>
             <p className="text-gray-300">
-              Clean XCode derived data, launch scripts and more
+              Clean derived data, launch scripts and more
             </p>
             <div className="flex-1" />
             <div className="flex flex-row items-center gap-2">
