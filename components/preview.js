@@ -12,14 +12,14 @@ import {Key} from './key'
 export const Preview = () => {
   return (
     <div className="border border-neutral-700 rounded-xl bg-neutral-900 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60 overflow-hidden">
-      <p className="text-neutral-600 text-xl p-5">
-        Search for commands and apps...
+      <p className="text-neutral-600 text-xl px-4 py-3">
+        What would you like to do?
       </p>
       <div className="w-full border-b border-white border-opacity-5" />
 
       <div className="flex flex-col">
         <div className="p-2 ">
-          <div className="bg-gradient-to-r from-[#0096FF77] to-[#0096FF22] bg-opacity-30 flex py-3 px-3 gap-2 relative rounded-lg">
+          <div className="bg-[#0096FF77] border border-[#0096FF55] bg-opacity-30 flex py-3 px-3 gap-2 relative rounded-lg">
             <Image src={slack} height={22} width={22} alt="slack" />
             <p className="text-sm">Slack</p>
           </div>
@@ -104,15 +104,14 @@ export const Preview = () => {
         <p className="text-xs">Translate</p>
         <Key title="⇧" />
 
-        <Key title="return" />
+        <Key title="⏎" />
         <div className="w-[1px] h-4 bg-neutral-600 mx-2" />
         <p className="text-xs">Search</p>
         <Key title="⌘" />
-
-        <Key title="return" />
+        <Key title="⏎" />
         <div className="w-[1px] h-4 bg-neutral-600 mx-2" />
         <p className="text-xs">Select</p>
-        <Key title="return" primary />
+        <Key title="⏎" primary />
       </div>
       {/* <div className="border-t border-neutral-800 bg-black bg-opacity-30">
         <div className="flex flex-row p-3">

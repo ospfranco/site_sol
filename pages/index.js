@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       <Head>
-        <title>SOL - MacOS Launcher</title>
+        <title>SOL - Open Source MacOS Launcher</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="Sol" />
@@ -38,7 +38,7 @@ export default function Home() {
 
       <div className="px-10 w-full">
         <div className="bg-gradient-to-tl from-indigo-900 rounded-3xl">
-          <div className="mx-auto w-full max-w-3xl py-32 px-6 items-center flex flex-col">
+          <div className="mx-auto w-full max-w-4xl py-32 px-6 items-center flex flex-col">
             {/* <img src="/SOL.svg" alt="Sol logo" className="h-8" /> */}
             <h1 className="text-white mt-4 text-5xl text-center font-semibold max-w-xl">
               Sol is a new way to interact with your Mac
@@ -53,7 +53,8 @@ export default function Home() {
               <Preview />
             </div>
 
-            <div className="flex flex-row gap-3 items-center mt-20 text-sm justify-center">
+            <div className="flex flex-col gap-3 items-center mt-20 text-sm justify-center">
+              <p className="text-white">Install via brew</p>
               <a
                 className="bg-neutral-700 border-neutral-600 bg-opacity-50 rounded-full px-6 h-9 flex items-center text-neutral-300 hover:text-white text-xs font-mono cursor-copy border "
                 onMouseDown={() => {
@@ -61,12 +62,16 @@ export default function Home() {
                 }}>
                 brew install --cask sol
               </a>
-              <p className="text-gray-300">or</p>
+              <p className="text-white">Download and install</p>
               <a
                 className="text-white cursor-pointer bg-blue-500 rounded-lg px-6 h-9 flex items-center text-xs border border-blue-500 bg-opacity-50"
                 href="https://github.com/ospfranco/sol/tree/main/releases">
                 Download
               </a>
+              <p className="text-white">or contribute</p>
+              <button className=" text-white cursor-pointer bg-black rounded-full px-6 h-9 flex items-center text-xs border border-neutral-800 bg-opacity-50">
+                View Source
+              </button>
             </div>
           </div>
         </div>
