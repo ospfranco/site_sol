@@ -6,8 +6,8 @@ html,
 body {
   @apply text-white bg-black p-0 m-0;
   color-scheme: dark;
+  overflow-x: hidden;
 }
-
 
 a {
   color: inherit;

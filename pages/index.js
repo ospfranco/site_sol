@@ -77,12 +77,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-10 my-20 max-w-7xl">
+      <div className="flex flex-col items-center gap-2 sm:gap-10 mt:10 sm:mt-20 sm:max-w-7xl text-center">
         <h2 className="text-3xl font-semibold p-12">
           Replace many of the smaller macOS utilities
         </h2>
-        <div className="flex flex-col lg:flex-row lg:flex-wrap gap-4 px-12">
-          <div className="border rounded-3xl p-8 border-gray-800 flex-1 gap-1 flex flex-col h-60">
+        <div className="flex flex-col lg:flex-row lg:flex-wrap gap-4 px-10">
+          <div className="border rounded-3xl p-8 border-gray-800 flex-1 gap-1 flex flex-col h-60 items-center">
             <p className="text-xl font-semibold">Emoji Picker</p>
             <p className="text-gray-300">
               Faster and more reliable than the native picker
@@ -94,7 +94,7 @@ export default function Home() {
               <Key title="space" />
             </div>
           </div>
-          <div className="border rounded-3xl p-8 border-gray-800 flex-1 gap-1 flex flex-col h-60">
+          <div className="border rounded-3xl p-8 border-gray-800 flex-1 gap-1 flex flex-col h-60 items-center">
             <p className="text-xl font-semibold">Window Manager</p>
             <p className="text-gray-300">
               Resize and move windows with a few keystrokes
@@ -106,7 +106,7 @@ export default function Home() {
               <Key title="return" />
             </div>
           </div>
-          <div className="border rounded-3xl p-8 border-gray-800 flex-1 gap-1 flex flex-col h-60">
+          <div className="border rounded-3xl p-8 border-gray-800 flex-1 gap-1 flex flex-col h-60 items-center">
             <p className="text-xl font-semibold">Clipboard Manager</p>
             <p className="text-gray-300">
               Keep up to 20k entries of your copy history
@@ -146,7 +146,7 @@ export default function Home() {
               <Key title="return" primary />
             </div>
           </div>
-          <div className="border rounded-3xl p-8 border-gray-800 flex-1 gap-1 flex flex-col h-60">
+          <div className="border rounded-3xl p-8 border-gray-800 flex-1 gap-1 flex flex-col h-60 items-center">
             <p className="text-xl font-semibold">Media key forwarding</p>
             <p className="text-gray-300">
               Media commands go to Spotify instead of the video player
@@ -160,7 +160,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row lg:flex-wrap gap-4 px-12">
-          <div className="border rounded-3xl p-8 border-gray-800 flex-1 gap-1 flex flex-col h-60">
+          <div className="border rounded-3xl p-8 border-gray-800 flex-1 gap-1 flex flex-col h-60 items-center">
             <p className="text-xl font-semibold">Translation</p>
             <p className="text-gray-300">
               Quickly translate between and up to 3 languages
@@ -182,7 +182,7 @@ export default function Home() {
               <div className="w-16 bg-white h-3 rounded-b" />
             </div>
           </div>
-          <div className="border rounded-3xl p-8 border-gray-800 flex-1 gap-1 flex flex-col h-60">
+          <div className="border rounded-3xl p-8 border-gray-800 flex-1 gap-1 flex flex-col h-60 items-center">
             <p className="text-xl font-semibold">Developer commands</p>
             <p className="text-gray-300">
               Clean XCode derived data, launch scripts and more
@@ -190,7 +190,7 @@ export default function Home() {
             <div className="flex-1" />
             <div className="flex flex-row items-center gap-2">
               <Image src={xcode} height={22} width={22} alt="slack" />
-              <p>XCode</p>
+              <p>Xcode</p>
             </div>
           </div>
         </div>
