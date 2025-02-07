@@ -12,177 +12,82 @@ import {Key} from './key'
 export const Preview = () => {
   return (
     <div className="border border-neutral-700 rounded-xl bg-neutral-900 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60 overflow-hidden">
-      <p className="text-neutral-600 text-xl px-4 py-3">
+      <p className="text-neutral-600 text-base sm:text-xl px-3 py-2 sm:px-4 sm:py-3">
         What would you like to do?
       </p>
       <div className="w-full border-b border-white border-opacity-5" />
 
       <div className="flex flex-col">
-        <div className="p-2 ">
-          <div className="bg-[#0096FF77] border border-[#0096FF55] bg-opacity-30 flex py-3 px-3 gap-2 relative rounded-lg">
-            <Image src={slack} height={22} width={22} alt="slack" />
-            <p className="text-sm">Slack</p>
+        <div className="p-2">
+          <div className="bg-[#0096FF77] border border-[#0096FF55] bg-opacity-30 flex gap-1 sm:gap-2 relative rounded sm:rounded-lg p-1 sm:p-3">
+            <div className=" h-1 w-1 " />
+            <Image src={slack} alt="slack" className="h-4 w-4 sm:h-6 sm:w-6" />
+            <p className="text-xs sm:text-base">Slack</p>
           </div>
         </div>
-        <div className="flex py-3 px-5 gap-2 relative">
-          <Image
-            src={xcode}
-            height={22}
-            width={22}
-            alt="slack"
-            className="opacity-60"
-          />
-          <p className="text-sm">Xcode</p>
-          <div className="absolute left-3 top-[22px] h-1 w-1 rounded-full bg-neutral-400" />
+        <div className="flex flex-row py-2 px-3 sm:py-3 sm:px-5 gap-1 sm:gap-2 items-center">
+          <div className=" h-1 w-1 rounded-full bg-neutral-400" />
+          <Image src={xcode} className="h-4 w-4 sm:h-6 sm:w-6" alt="xcode" />
+          <p className="text-xs sm:text-base">Xcode</p>
         </div>
-        <div className="flex py-3 px-5 gap-2 relative">
-          <Image
-            src={iterm}
-            height={22}
-            width={22}
-            alt="slack"
-            className="opacity-60"
-          />
-          <p className="text-sm">iTerm</p>
-          <div className="absolute left-3 top-[22px] h-1 w-1 rounded-full bg-neutral-400" />
+        <div className="flex flex-row items-center py-2 px-3 sm:py-3 sm:px-5 gap-1 sm:gap-2">
+          <div className="h-1 w-1 rounded-full bg-neutral-400" />
+          <Image src={iterm} className="h-4 w-4 sm:h-6 sm:w-6" alt="iterm" />
+          <p className="text-xs sm:text-base">iTerm</p>
         </div>
-        <div className="flex py-3 px-5 gap-2 relative">
+        <div className="flex flex-row items-center py-2 px-3 sm:py-3 sm:px-5 gap-1 sm:gap-2">
+          <div className="h-1 w-1 rounded-full bg-neutral-400" />
           <Image
             src={spotify}
-            height={22}
-            width={22}
-            alt="slack"
-            className="opacity-60"
+            className="h-4 w-4 sm:h-6 sm:w-6"
+            alt="spotify"
           />
-          <p className="text-sm">Spotify</p>
-          <div className="absolute left-3 top-[22px] h-1 w-1 rounded-full bg-neutral-400" />
+          <p className="text-xs sm:text-base">Spotify</p>
         </div>
-        <div className="flex py-3 px-5 gap-2">
+        <div className="flex py-2 sm:py-3 px-5 gap-2">
+          <div className=" h-1 w-1" />
           <Image
             src={calendar}
-            height={22}
-            width={22}
-            alt="slack"
-            className="opacity-60"
+            className="h-4 w-4 sm:h-6 sm:w-6"
+            alt="calendar"
           />
-          <p className="text-sm">Calendar</p>
+          <p className="text-xs sm:text-base">Calendar</p>
         </div>
-        <div className="flex py-3 px-5 gap-2">
+        <div className="flex py-2 sm:py-3 px-5 gap-2">
+          <div className=" h-1 w-1 " />
           <Image
             src={discord}
-            height={22}
-            width={22}
-            alt="slack"
-            className="opacity-60"
+            className="h-4 w-4 sm:h-6 sm:w-6"
+            alt="discord"
           />
-          <p className="text-sm">Discord</p>
+          <p className="text-xs sm:text-base">Discord</p>
         </div>
-        <div className="flex py-3 px-5 gap-2">
-          <Image
-            src={code}
-            height={22}
-            width={22}
-            alt="slack"
-            className="opacity-60"
-          />
-          <p className="text-sm">Visual Studio Code</p>
+        <div className="flex py-2 sm:py-3 px-5 gap-2">
+          <div className=" h-1 w-1 " />
+          <Image src={code} className="h-4 w-4 sm:h-6 sm:w-6" alt="code" />
+          <p className="text-xs sm:text-base">Visual Studio Code</p>
         </div>
-        <div className="flex py-3 px-5 gap-2">
-          <Image
-            src={figma}
-            height={22}
-            width={22}
-            alt="slack"
-            className="opacity-60"
-          />
-          <p className="text-sm">Figma.com</p>
+        <div className="flex py-2 sm:py-3 px-5 gap-2">
+          <div className=" h-1 w-1 " />
+          <Image src={figma} className="h-4 w-4 sm:h-6 sm:w-6" alt="figma" />
+          <p className="text-xs sm:text-base">Figma.com</p>
           <div className="flex-1" />
-          <p className="text-sm text-neutral-500">Bookmark</p>
+          <p className="text-xs sm:text-base text-neutral-500">Bookmark</p>
         </div>
       </div>
       <div className="border-t border-white border-opacity-5 px-3 py-2 flex justify-end gap-2 items-center">
-        <p className="text-xs">Translate</p>
+        <p className="text-[10px] sm:text-xs">Translate</p>
         <Key title="⇧" />
 
         <Key title="⏎" />
         <div className="w-[1px] h-4 bg-neutral-600 mx-2" />
-        <p className="text-xs">Search</p>
+        <p className="text-[10px] sm:text-xs">Search</p>
         <Key title="⌘" />
         <Key title="⏎" />
         <div className="w-[1px] h-4 bg-neutral-600 mx-2" />
-        <p className="text-xs">Select</p>
+        <p className="text-[10px] sm:text-xs">Select</p>
         <Key title="⏎" primary />
       </div>
-      {/* <div className="border-t border-neutral-800 bg-black bg-opacity-30">
-        <div className="flex flex-row p-3">
-          <div className="flex-1">
-            <p className="text-xs">Today</p>
-            <div className="border-l border-blue-500 pl-1 mt-2">
-              <p className="text-xs">
-                14:00 <span className="text-neutral-400">- 15:00</span>
-              </p>
-              <p className="font-semibold text-xs">Important meeting</p>
-            </div>
-          </div>
-          <div className="flex-1">
-            <p className="text-xs border-l pl-1 border-neutral-600 text-neutral-400">
-              Tuesday
-            </p>
-            <div className="border-l border-orange-500 pl-1 mt-2">
-              <p className="text-xs">
-                10:00 <span className="text-neutral-400">- 11:00</span>
-              </p>
-              <p className="font-semibold text-xs">Engineering daily</p>
-            </div>
-            <div className="border-l border-blue-500 pl-1 mt-2">
-              <p className="text-xs">
-                14:00 <span className="text-neutral-400">- 15:00</span>
-              </p>
-              <p className="font-semibold text-xs">Important meeting</p>
-            </div>
-          </div>
-          <div className="flex-1">
-            <p className="text-xs border-l pl-1 border-neutral-600 text-neutral-400">
-              Wednesday
-            </p>
-            <div className="border-l border-blue-500 pl-1 mt-2">
-              <p className="text-xs">
-                15:00 <span className="text-neutral-400">- 18:00</span>
-              </p>
-              <p className="font-semibold text-xs">Thinking</p>
-            </div>
-          </div>
-          <div className="flex-1">
-            <p className="text-xs border-l pl-1 border-neutral-600 text-neutral-400">
-              Thursday
-            </p>
-            <p className="text-xs text-neutral-500 pt-1">No Events</p>
-          </div>
-          <div className="flex-1">
-            <p className="text-xs border-l pl-1 border-neutral-600 text-neutral-400">
-              Friday
-            </p>
-            <div className="border-l border-green-500 pl-1 mt-2">
-              <p className="text-xs">
-                14:00 <span className="text-neutral-400">- 15:00</span>
-              </p>
-              <p className="font-semibold text-xs">Birthday Emily</p>
-            </div>
-          </div>
-        </div>
-        <div className="border-t border-white border-opacity-5 flex flex-row px-3 py-2 items-center">
-          <Image src={spotify} height={18} width={18} alt="slack" />
-          <p className="text-xs ml-1">
-            Don&apos;t stop me now{" "}
-            <span className="text-neutral-400">Queen</span>
-          </p>
-          <div className="flex-1" />
-          <p className="font-semibold text-xs">Open</p>
-          <div className="text-xs bg-blue-500 rounded-sm rounded-br-[6px] px-2 ml-2">
-            ⏎
-          </div>
-        </div>
-      </div> */}
     </div>
   )
 }

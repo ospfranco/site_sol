@@ -32,12 +32,12 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content="https://www.solapp.io/preview.png"
+          content="https://www.sol.ospfranco.com/preview.png"
         />
       </Head>
 
-      <div className="px-10 w-full">
-        <div className="bg-gradient-to-tl from-pink-600 via-blue-600 to-orange-500 rounded-3xl">
+      <div className="w-full">
+        <div className="bg-gradient-to-tl from-pink-600 via-blue-600 to-orange-500">
           <div className="mx-auto w-full max-w-4xl py-32 px-6 items-center flex flex-col">
             {/* <img src="/SOL.svg" alt="Sol logo" className="h-8" /> */}
             <h1 className="text-white mt-4 text-5xl text-center font-semibold max-w-xl">
@@ -47,7 +47,7 @@ export default function Home() {
               Get everything done faster with a simple and beautiful launcher
             </h2>
 
-            <div className="relative h-[500px] mt-20 w-full">
+            <div className="relative sm:h-[500px] mt-8 sm:mt-20 w-full">
               <div className="absolute top-0 bottom-0 -left-10 right-1/3 rounded-full mix-blend-multiply filter blur-3xl bg-pink-400 opacity-30" />
               <div className="absolute top-0 bottom-0 -right-10 left-1/3 rounded-full mix-blend-multiply filter blur-3xl bg-blue-400 opacity-30" />
               <Preview />
