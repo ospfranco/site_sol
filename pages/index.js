@@ -44,7 +44,8 @@ export default function Home() {
               Sol is a new way to interact with your Mac
             </h1>
             <h2 className="text-neutral-300 mt-4 text-lg text-center">
-              Get everything done faster with a simple and beautiful launcher
+              Get everything done faster with a simple, beautiful and open
+              source launcher
             </h2>
 
             <div className="relative sm:h-[500px] mt-8 sm:mt-20 w-full">
@@ -82,6 +83,7 @@ export default function Home() {
           Replace many of the smaller macOS utilities
         </h2>
         <div className="flex flex-col lg:flex-row lg:flex-wrap gap-4 px-10">
+          {/* First row */}
           <div className="border rounded-3xl p-8 border-gray-800 flex-1 gap-1 flex flex-col h-60 items-center">
             <p className="text-xl font-semibold">Emoji Picker</p>
             <p className="text-gray-300">
@@ -120,6 +122,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/* Second row */}
         <div className="flex flex-col lg:flex-row lg:flex-wrap gap-4 px-12">
           <div className="border rounded-3xl p-8 border-gray-800 flex-1 gap-1 flex flex-col h-60">
             <p className="text-xl font-semibold">Calendar integration</p>
