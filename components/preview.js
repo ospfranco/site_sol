@@ -7,11 +7,11 @@ import iterm from '../public/iterm.png'
 import slack from '../public/slack.png'
 import spotify from '../public/spotify.png'
 import xcode from '../public/xcode.png'
-import {Key} from './key'
+import {Key} from './Key'
 
 export const Preview = () => {
   return (
-    <div className="border border-neutral-700 rounded-xl bg-neutral-900 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60 overflow-hidden">
+    <div className="border border-neutral-700 rounded-xl bg-neutral-900 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60 overflow-hidden w-full sm:w-[800px]">
       <p className="text-neutral-600 text-base sm:text-xl px-3 py-2 sm:px-4 sm:py-3">
         What would you like to do?
       </p>
@@ -44,7 +44,7 @@ export const Preview = () => {
           />
           <p className="text-xs sm:text-base">Spotify</p>
         </div>
-        <div className="flex py-2 sm:py-3 px-5 gap-2">
+        <div className="flex flex-row items-center py-2 px-3 sm:py-3 sm:px-5 gap-1 sm:gap-2">
           <div className=" h-1 w-1" />
           <Image
             src={calendar}
@@ -53,7 +53,7 @@ export const Preview = () => {
           />
           <p className="text-xs sm:text-base">Calendar</p>
         </div>
-        <div className="flex py-2 sm:py-3 px-5 gap-2">
+        <div className="flex flex-row items-center py-2 px-3 sm:py-3 sm:px-5 gap-1 sm:gap-2">
           <div className=" h-1 w-1 " />
           <Image
             src={discord}
@@ -62,12 +62,12 @@ export const Preview = () => {
           />
           <p className="text-xs sm:text-base">Discord</p>
         </div>
-        <div className="flex py-2 sm:py-3 px-5 gap-2">
+        <div className="flex flex-row items-center py-2 px-3 sm:py-3 sm:px-5 gap-1 sm:gap-2">
           <div className=" h-1 w-1 " />
           <Image src={code} className="h-4 w-4 sm:h-6 sm:w-6" alt="code" />
           <p className="text-xs sm:text-base">Visual Studio Code</p>
         </div>
-        <div className="flex py-2 sm:py-3 px-5 gap-2">
+        <div className="flex flex-row items-center py-2 px-3 sm:py-3 sm:px-5 gap-1 sm:gap-2">
           <div className=" h-1 w-1 " />
           <Image src={figma} className="h-4 w-4 sm:h-6 sm:w-6" alt="figma" />
           <p className="text-xs sm:text-base">Figma.com</p>
