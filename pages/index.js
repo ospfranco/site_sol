@@ -30,7 +30,7 @@ export default function Home() {
         />
       </Head>
 
-      <div class="absolute inset-0 -z-10 h-full w-full px-5 py-8 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] overflow-y-scroll flex flex-col items-center">
+      <div className="absolute inset-0 -z-10 h-full w-full px-5 py-8 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] overflow-y-scroll flex flex-col items-center">
         <div className="mx-auto w-full py-32 px-6 items-center flex flex-col gap-4">
           {/* <img src="/SOL.svg" alt="Sol logo" className="h-8" /> */}
           <h1 className="text-white mt-4 text-5xl text-center font-semibold max-w-xl">
