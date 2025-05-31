@@ -1,4 +1,4 @@
-import {CommandPrompt} from '../components/CommandPrompt'
+import CommandPrompt from '../components/CommandPrompt'
 
 export default function Documentation() {
   return (

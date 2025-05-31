@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-export function CommandPrompt() {
+export default function CommandPrompt() {
   const [copied, setCopied] = useState(false)
   const [hovered, setHovered] = useState(false)
   const command = 'brew install --cask sol'

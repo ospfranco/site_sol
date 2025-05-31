@@ -8,7 +8,7 @@ import xcode from '../public/xcode.png'
 import preview from '../public/preview.jpg'
 import {Card} from '../components/Card'
 import logo from '../public/logo.png'
-import {CommandPrompt} from './components/CommandPrompt'
+import CommandPrompt from './components/CommandPrompt'
 
 export default function Home() {
   return (
