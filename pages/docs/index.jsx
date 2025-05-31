@@ -386,8 +386,8 @@ export default function Documentation() {
                     }}
                   />
                   <span className="text-neutral-300 text-sm pl-1">
-                    Comprehensive window management tools. Search "window" to
-                    see all available options.
+                    Comprehensive window management tools. Search
+                    $quot;window$quot; to see all available options.
                   </span>
                 </div>
               </div>
@@ -482,7 +482,7 @@ export default function Documentation() {
                   IP Address Lookup
                 </h3>
                 <p className="text-neutral-300 leading-relaxed">
-                  Type "IP" to quickly reveal your current IP address.
+                  Type $quot;IP$quot; to quickly reveal your current IP address.
                 </p>
               </div>
             </div>
@@ -497,9 +497,9 @@ export default function Documentation() {
             </h2>
             <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 mb-8">
               <p className="text-yellow-200 text-sm">
-                💡 <strong>Access settings</strong> by searching for "Sol
-                Settings" in the app, or by pressing ⌘ + comma when the app is
-                open.
+                💡 <strong>Access settings</strong> by searching for $quot;Sol
+                Settings$quot; in the app, or by pressing ⌘ + comma when the app
+                is open.
               </p>
             </div>
 
