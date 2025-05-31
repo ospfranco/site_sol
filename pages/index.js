@@ -43,16 +43,26 @@ export default function Home() {
 
           <Preview />
 
-          <div className="flex flex-row gap-3 items-center mt-20 text-sm justify-center">
-            <a
-              className="text-white cursor-pointer bg-blue-500 rounded-full px-6 h-9 flex items-center text-xs border border-blue-500 bg-opacity-50 hover:bg-blue-600 transition duration-200"
-              href="https://github.com/ospfranco/sol/tree/main/releases">
-              Download
+          <div className="flex flex-col items-center justify-center mt-20 space-y-4">
+            <div className="flex flex-row gap-3 items-center text-sm">
+              <a
+                href="https://github.com/ospfranco/sol/tree/main/releases"
+                className="text-white cursor-pointer bg-blue-500 rounded-full px-6 h-9 flex items-center text-xs border border-blue-500 bg-opacity-50 hover:bg-blue-600 transition duration-200"
+              >
+                Download
+              </a>
+              <p className="text-white">or</p>
+              <a href="https://github.com/ospfranco/sol">
+                <button className="text-white cursor-pointer bg-black rounded-full px-6 h-9 flex items-center text-xs border border-neutral-800 bg-opacity-50 hover:bg-neutral-700 transition duration-200">
+                  View Source
+                </button>
+              </a>
+            </div>
+            <a href="./docs/">
+              <button className="text-white cursor-pointer bg-black rounded-full px-6 h-9 flex items-center text-xs border border-neutral-800 bg-opacity-50 hover:bg-neutral-700 transition duration-200">
+                Documentation
+              </button>
             </a>
-            <p className="text-white">or</p>
-            <button className=" text-white cursor-pointer bg-black rounded-full px-6 h-9 flex items-center text-xs border border-neutral-800 bg-opacity-50 hover:bg-neutral-700 transition duration-200">
-              View Source
-            </button>
           </div>
         </div>
 
