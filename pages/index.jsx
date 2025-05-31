@@ -7,7 +7,6 @@ import spotify from '../public/spotify.png'
 import xcode from '../public/xcode.png'
 import preview from '../public/preview.jpg'
 import {Card} from '../components/Card'
-import {useState} from 'react'
 import logo from '../public/logo.png'
 import {CommandPrompt} from './components/CommandPrompt'
 
@@ -49,7 +48,7 @@ export default function Home() {
             <div className="flex gap-3">
               <a href="./docs/">
                 <button className="text-white bg-black rounded-full px-5 h-9 flex items-center text-xs  bg-opacity-70 hover:bg-neutral-700 transition duration-200">
-                  Documentation
+                  Get Started
                 </button>
               </a>
               <a

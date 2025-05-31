@@ -2,7 +2,7 @@ import {CommandPrompt} from '../components/CommandPrompt'
 
 export default function Documentation() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-neutral-900 to-neutral-800">
+    <div className="min-h-screen bg-gradient-to-br from-black to-neutral-900">
       <div className="max-w-4xl mx-auto p-8">
         <header className="mb-12 text-center">
           <h1 className="text-5xl font-bold text-white mb-4" name="get-started">
@@ -54,7 +54,6 @@ export default function Documentation() {
               </div>
             </div>
           </section>
-
           {/* Built-in Shortcuts */}
           <section className="bg-neutral-800/50 rounded-xl p-8 border border-neutral-700">
             <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
@@ -69,107 +68,300 @@ export default function Documentation() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-neutral-900/50 rounded-lg p-6 border border-neutral-600">
+              {/* Text and Data */}
+              <div>
                 <h3 className="text-xl font-semibold text-orange-400 mb-4 flex items-center">
                   <span className="mr-2">📝</span>
                   Text and Data
                 </h3>
-                <ul className="space-y-3">
-                  <li className="text-neutral-300">
-                    <strong className="text-white">Paste as JSON</strong> -
-                    Format clipboard content as JSON
+                <ul className="space-y-5">
+                  <li>
+                    <div className="flex flex-col">
+                      <input
+                        type="text"
+                        readOnly
+                        value="Paste as JSON"
+                        className="bg-neutral-700/80 text-white rounded-lg px-4 py-2 border border-neutral-600 mb-1 focus:outline-none cursor-default"
+                        style={{
+                          fontWeight: 600,
+                          fontSize: '1.05rem',
+                          letterSpacing: '0.01em',
+                        }}
+                      />
+                      <span className="text-neutral-300 text-sm pl-1">
+                        Format clipboard content as JSON
+                      </span>
+                    </div>
                   </li>
-                  <li className="text-neutral-300">
-                    <strong className="text-white">Generate Nano ID</strong> -
-                    Create a Nano ID
+                  <li>
+                    <div className="flex flex-col">
+                      <input
+                        type="text"
+                        readOnly
+                        value="Generate Nano ID"
+                        className="bg-neutral-700/80 text-white rounded-lg px-4 py-2 border border-neutral-600 mb-1 focus:outline-none cursor-default"
+                        style={{
+                          fontWeight: 600,
+                          fontSize: '1.05rem',
+                          letterSpacing: '0.01em',
+                        }}
+                      />
+                      <span className="text-neutral-300 text-sm pl-1">
+                        Create a Nano ID
+                      </span>
+                    </div>
                   </li>
-                  <li className="text-neutral-300">
-                    <strong className="text-white">Generate UUID</strong> -
-                    Generate a UUID
+                  <li>
+                    <div className="flex flex-col">
+                      <input
+                        type="text"
+                        readOnly
+                        value="Generate UUID"
+                        className="bg-neutral-700/80 text-white rounded-lg px-4 py-2 border border-neutral-600 mb-1 focus:outline-none cursor-default"
+                        style={{
+                          fontWeight: 600,
+                          fontSize: '1.05rem',
+                          letterSpacing: '0.01em',
+                        }}
+                      />
+                      <span className="text-neutral-300 text-sm pl-1">
+                        Generate a UUID
+                      </span>
+                    </div>
                   </li>
-                  <li className="text-neutral-300">
-                    <strong className="text-white">Generate Lorem Ipsum</strong>{' '}
-                    - Create placeholder text
+                  <li>
+                    <div className="flex flex-col">
+                      <input
+                        type="text"
+                        readOnly
+                        value="Generate Lorem Ipsum"
+                        className="bg-neutral-700/80 text-white rounded-lg px-4 py-2 border border-neutral-600 mb-1 focus:outline-none cursor-default"
+                        style={{
+                          fontWeight: 600,
+                          fontSize: '1.05rem',
+                          letterSpacing: '0.01em',
+                        }}
+                      />
+                      <span className="text-neutral-300 text-sm pl-1">
+                        Create placeholder text
+                      </span>
+                    </div>
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-neutral-900/50 rounded-lg p-6 border border-neutral-600">
+              {/* System Management */}
+              <div>
                 <h3 className="text-xl font-semibold text-red-400 mb-4 flex items-center">
                   <span className="mr-2">⚙️</span>
                   System Management
                 </h3>
-                <ul className="space-y-3">
-                  <li className="text-neutral-300">
-                    <strong className="text-white">
-                      Remove derived data folder
-                    </strong>{' '}
-                    - Clear Xcode derived data
+                <ul className="space-y-5">
+                  <li>
+                    <div className="flex flex-col">
+                      <input
+                        type="text"
+                        readOnly
+                        value="Remove derived data folder"
+                        className="bg-neutral-700/80 text-white rounded-lg px-4 py-2 border border-neutral-600 mb-1 focus:outline-none cursor-default"
+                        style={{
+                          fontWeight: 600,
+                          fontSize: '1.05rem',
+                          letterSpacing: '0.01em',
+                        }}
+                      />
+                      <span className="text-neutral-300 text-sm pl-1">
+                        Clear Xcode derived data
+                      </span>
+                    </div>
                   </li>
-                  <li className="text-neutral-300">
-                    <strong className="text-white">Kill process</strong> -
-                    Terminate running processes
+                  <li>
+                    <div className="flex flex-col">
+                      <input
+                        type="text"
+                        readOnly
+                        value="Kill process"
+                        className="bg-neutral-700/80 text-white rounded-lg px-4 py-2 border border-neutral-600 mb-1 focus:outline-none cursor-default"
+                        style={{
+                          fontWeight: 600,
+                          fontSize: '1.05rem',
+                          letterSpacing: '0.01em',
+                        }}
+                      />
+                      <span className="text-neutral-300 text-sm pl-1">
+                        Terminate running processes
+                      </span>
+                    </div>
                   </li>
-                  <li className="text-neutral-300">
-                    <strong className="text-white">Kill all apps</strong> -
-                    Close all running applications
+                  <li>
+                    <div className="flex flex-col">
+                      <input
+                        type="text"
+                        readOnly
+                        value="Kill all apps"
+                        className="bg-neutral-700/80 text-white rounded-lg px-4 py-2 border border-neutral-600 mb-1 focus:outline-none cursor-default"
+                        style={{
+                          fontWeight: 600,
+                          fontSize: '1.05rem',
+                          letterSpacing: '0.01em',
+                        }}
+                      />
+                      <span className="text-neutral-300 text-sm pl-1">
+                        Close all running applications
+                      </span>
+                    </div>
                   </li>
-                  <li className="text-neutral-300">
-                    <strong className="text-white">
-                      Toggle system appearance
-                    </strong>{' '}
-                    - Switch between light and dark mode
+                  <li>
+                    <div className="flex flex-col">
+                      <input
+                        type="text"
+                        readOnly
+                        value="Toggle system appearance"
+                        className="bg-neutral-700/80 text-white rounded-lg px-4 py-2 border border-neutral-600 mb-1 focus:outline-none cursor-default"
+                        style={{
+                          fontWeight: 600,
+                          fontSize: '1.05rem',
+                          letterSpacing: '0.01em',
+                        }}
+                      />
+                      <span className="text-neutral-300 text-sm pl-1">
+                        Switch between light and dark mode
+                      </span>
+                    </div>
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-neutral-900/50 rounded-lg p-6 border border-neutral-600">
+              {/* Communication & Network */}
+              <div>
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4 flex items-center">
                   <span className="mr-2">🌐</span>
                   Communication & Network
                 </h3>
-                <ul className="space-y-3">
-                  <li className="text-neutral-300">
-                    <strong className="text-white">Start Google Meet</strong> -
-                    Quick access to Google Meet
+                <ul className="space-y-5">
+                  <li>
+                    <div className="flex flex-col">
+                      <input
+                        type="text"
+                        readOnly
+                        value="Start Google Meet"
+                        className="bg-neutral-700/80 text-white rounded-lg px-4 py-2 border border-neutral-600 mb-1 focus:outline-none cursor-default"
+                        style={{
+                          fontWeight: 600,
+                          fontSize: '1.05rem',
+                          letterSpacing: '0.01em',
+                        }}
+                      />
+                      <span className="text-neutral-300 text-sm pl-1">
+                        Quick access to Google Meet
+                      </span>
+                    </div>
                   </li>
-                  <li className="text-neutral-300">
-                    <strong className="text-white">
-                      Reveal Wi-Fi password
-                    </strong>{' '}
-                    - Show current Wi-Fi password
+                  <li>
+                    <div className="flex flex-col">
+                      <input
+                        type="text"
+                        readOnly
+                        value="Reveal Wi-Fi password"
+                        className="bg-neutral-700/80 text-white rounded-lg px-4 py-2 border border-neutral-600 mb-1 focus:outline-none cursor-default"
+                        style={{
+                          fontWeight: 600,
+                          fontSize: '1.05rem',
+                          letterSpacing: '0.01em',
+                        }}
+                      />
+                      <span className="text-neutral-300 text-sm pl-1">
+                        Show current Wi-Fi password
+                      </span>
+                    </div>
                   </li>
-                  <li className="text-neutral-300">
-                    <strong className="text-white">
-                      Copy Wi-Fi password to clipboard
-                    </strong>{' '}
-                    - Copy Wi-Fi credentials
+                  <li>
+                    <div className="flex flex-col">
+                      <input
+                        type="text"
+                        readOnly
+                        value="Copy Wi-Fi password to clipboard"
+                        className="bg-neutral-700/80 text-white rounded-lg px-4 py-2 border border-neutral-600 mb-1 focus:outline-none cursor-default"
+                        style={{
+                          fontWeight: 600,
+                          fontSize: '1.05rem',
+                          letterSpacing: '0.01em',
+                        }}
+                      />
+                      <span className="text-neutral-300 text-sm pl-1">
+                        Copy Wi-Fi credentials
+                      </span>
+                    </div>
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-neutral-900/50 rounded-lg p-6 border border-neutral-600">
+              {/* Productivity Tools */}
+              <div>
                 <h3 className="text-xl font-semibold text-emerald-400 mb-4 flex items-center">
                   <span className="mr-2">🚀</span>
                   Productivity Tools
                 </h3>
-                <ul className="space-y-3">
-                  <li className="text-neutral-300">
-                    <strong className="text-white">Scratchpad</strong> -
-                    Scratchpad for your notes
+                <ul className="space-y-5">
+                  <li>
+                    <div className="flex flex-col">
+                      <input
+                        type="text"
+                        readOnly
+                        value="Scratchpad"
+                        className="bg-neutral-700/80 text-white rounded-lg px-4 py-2 border border-neutral-600 mb-1 focus:outline-none cursor-default"
+                        style={{
+                          fontWeight: 600,
+                          fontSize: '1.05rem',
+                          letterSpacing: '0.01em',
+                        }}
+                      />
+                      <span className="text-neutral-300 text-sm pl-1">
+                        Scratchpad for your notes
+                      </span>
+                    </div>
                   </li>
-                  <li className="text-neutral-300">
-                    <strong className="text-white">Clipboard manager</strong> -
-                    or{' '}
-                    <code className="bg-neutral-700 text-yellow-300 px-2 py-1 rounded font-mono text-sm">
-                      ⌘⌥V
-                    </code>
+                  <li>
+                    <div className="flex flex-col">
+                      <input
+                        type="text"
+                        readOnly
+                        value="Clipboard manager"
+                        className="bg-neutral-700/80 text-white rounded-lg px-4 py-2 border border-neutral-600 mb-1 focus:outline-none cursor-default"
+                        style={{
+                          fontWeight: 600,
+                          fontSize: '1.05rem',
+                          letterSpacing: '0.01em',
+                        }}
+                      />
+                      <span className="text-neutral-300 text-sm pl-1">
+                        or{' '}
+                        <span className="bg-neutral-700 text-yellow-300 px-2 py-1 rounded text-sm ml-1">
+                          ⌘⌥V
+                        </span>
+                      </span>
+                    </div>
                   </li>
-                  <li className="text-neutral-300">
-                    <strong className="text-white">Emoji picker</strong> - or{' '}
-                    <code className="bg-neutral-700 text-yellow-300 px-2 py-1 rounded font-mono text-sm">
-                      ⌘⌃Space
-                    </code>
+                  <li>
+                    <div className="flex flex-col">
+                      <input
+                        type="text"
+                        readOnly
+                        value="Emoji picker"
+                        className="bg-neutral-700/80 text-white rounded-lg px-4 py-2 border border-neutral-600 mb-1 focus:outline-none cursor-default"
+                        style={{
+                          fontWeight: 600,
+                          fontSize: '1.05rem',
+                          letterSpacing: '0.01em',
+                        }}
+                      />
+                      <span className="text-neutral-300 text-sm pl-1">
+                        or{' '}
+                        <span className="bg-neutral-700 text-yellow-300 px-2 py-1 rounded text-sm ml-1">
+                          ⌘⌃Space
+                        </span>
+                      </span>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -181,10 +373,23 @@ export default function Documentation() {
                   <span className="mr-2">🪟</span>
                   Window Management
                 </h3>
-                <p className="text-neutral-300 leading-relaxed">
-                  Comprehensive window management tools. Search "window" to see
-                  all available options.
-                </p>
+                <div className="flex flex-col mb-2">
+                  <input
+                    type="text"
+                    readOnly
+                    value="Window Management"
+                    className="bg-neutral-700/80 text-white rounded-lg px-4 py-2 border border-neutral-600 mb-1 focus:outline-none cursor-default"
+                    style={{
+                      fontWeight: 600,
+                      fontSize: '1.05rem',
+                      letterSpacing: '0.01em',
+                    }}
+                  />
+                  <span className="text-neutral-300 text-sm pl-1">
+                    Comprehensive window management tools. Search "window" to
+                    see all available options.
+                  </span>
+                </div>
               </div>
 
               <div className="bg-neutral-900/30 rounded-lg p-6 border border-neutral-600">
@@ -192,26 +397,42 @@ export default function Documentation() {
                   <span className="mr-2">⚡</span>
                   Custom Shortcuts
                 </h3>
-                <p className="text-neutral-300 mb-4">
-                  Create your own shortcuts using:
-                </p>
-                <ul className="ml-4 space-y-2">
-                  <li className="text-neutral-300">
-                    <strong className="text-white">URL shortcuts</strong> -
+                <div className="flex flex-col mb-2">
+                  <input
+                    type="text"
+                    readOnly
+                    value="URL shortcuts"
+                    className="bg-neutral-700/80 text-white rounded-lg px-4 py-2 border border-neutral-600 mb-1 focus:outline-none cursor-default"
+                    style={{
+                      fontWeight: 600,
+                      fontSize: '1.05rem',
+                      letterSpacing: '0.01em',
+                    }}
+                  />
+                  <span className="text-neutral-300 text-sm pl-1">
                     Launch websites or web apps
-                  </li>
-                  <li className="text-neutral-300">
-                    <strong className="text-white">
-                      AppleScript shortcuts
-                    </strong>{' '}
-                    - Execute custom AppleScript commands
-                  </li>
-                </ul>
+                  </span>
+                </div>
+                <div className="flex flex-col">
+                  <input
+                    type="text"
+                    readOnly
+                    value="AppleScript shortcuts"
+                    className="bg-neutral-700/80 text-white rounded-lg px-4 py-2 border border-neutral-600 mb-1 focus:outline-none cursor-default"
+                    style={{
+                      fontWeight: 600,
+                      fontSize: '1.05rem',
+                      letterSpacing: '0.01em',
+                    }}
+                  />
+                  <span className="text-neutral-300 text-sm pl-1">
+                    Execute custom AppleScript commands
+                  </span>
+                </div>
               </div>
             </div>
           </section>
 
-          {/* Features */}
           <section className="bg-neutral-800/50 rounded-xl p-8 border border-neutral-700">
             <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
               <span className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center text-white font-bold text-sm mr-3">
@@ -266,7 +487,6 @@ export default function Documentation() {
               </div>
             </div>
           </section>
-
           {/* Settings */}
           <section className="bg-neutral-800/50 rounded-xl p-8 border border-neutral-700">
             <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
@@ -278,7 +498,8 @@ export default function Documentation() {
             <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 mb-8">
               <p className="text-yellow-200 text-sm">
                 💡 <strong>Access settings</strong> by searching for "Sol
-                Settings" in the app.
+                Settings" in the app, or by pressing ⌘ + comma when the app is
+                open.
               </p>
             </div>
 
