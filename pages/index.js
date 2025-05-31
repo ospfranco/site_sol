@@ -8,87 +8,8 @@ import xcode from '../public/xcode.png'
 import preview from '../public/preview.jpg'
 import {Card} from '../components/Card'
 import {useState} from 'react'
-
-function CommandPrompt() {
-  const [copied, setCopied] = useState(false)
-  const [hovered, setHovered] = useState(false)
-  const command = 'brew install --cask sol'
-
-  const handleCopy = async () => {
-    await navigator.clipboard.writeText(command)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 1200)
-  }
-
-  return (
-    <div
-      className={`relative group w-full max-w-xl mx-auto my-4 cursor-pointer transition border rounded-lg px-5 py-4 bg-neutral-900 border-neutral-700 shadow-lg flex items-center`}
-      onClick={handleCopy}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      tabIndex={0}
-      role="button"
-      aria-label="Copy install command">
-      <span className="text-green-400 font-mono text-base select-none">$</span>
-      <span className="ml-3 text-white font-mono text-base select-all">
-        {command}
-      </span>
-      <span className="ml-auto flex items-center">
-        {copied ? (
-          <span className="text-green-400 text-sm font-semibold flex items-center gap-1">
-            <svg
-              width="18"
-              height="18"
-              fill="none"
-              viewBox="0 0 24 24"
-              className="inline-block">
-              <path
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M5 13l4 4L19 7"
-              />
-            </svg>
-            Copied!
-          </span>
-        ) : (
-          <span
-            className={`transition-opacity duration-200 flex items-center gap-1 ${
-              hovered ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
-            }`}>
-            <svg
-              width="18"
-              height="18"
-              fill="none"
-              viewBox="0 0 24 24"
-              className="inline-block">
-              <rect
-                x="9"
-                y="9"
-                width="13"
-                height="13"
-                rx="2"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-              <rect
-                x="3"
-                y="3"
-                width="13"
-                height="13"
-                rx="2"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-            </svg>
-            <span className="text-neutral-400 text-xs">Click to copy</span>
-          </span>
-        )}
-      </span>
-    </div>
-  )
-}
+import logo from '../public/logo.png'
+import {CommandPrompt} from './components/CommandPrompt'
 
 export default function Home() {
   return (
@@ -116,6 +37,13 @@ export default function Home() {
         <header className="fixed top-0 left-0 w-full z-20 flex flex-col items-center justify-between py-4 bg-black/60 backdrop-blur-md border-b border-neutral-800">
           <div className="w-full sm:w-[80%] md:w-[70%] px-6 flex flex-row items-center justify-between">
             <div className="flex items-center gap-2">
+              <Image
+                src={logo}
+                alt="Sol Logo"
+                width={32}
+                height={32}
+                className="rounded-full"
+              />
               <span className="text-white font-bold text-lg">Sol</span>
             </div>
             <div className="flex gap-3">
@@ -133,15 +61,15 @@ export default function Home() {
           </div>
         </header>
         <div className="h-20" />
-        <div className="mx-auto w-full pt-12 pb-32 px-6 flex flex-col gap-4 sm:w-[70%] md:w-[60%]">
-          <h1 className="text-white mt-4 text-4xl sm:text-6xl max-w-3xl">
+        <div className="mx-auto w-full pt-24 pb-32 px-6 gap-4 sm:w-[70%] md:w-[60%] flex flex-col items-center">
+          <h1 className="text-white mt-4 text-4xl sm:text-6xl max-w-3xl text-center">
             Sol is an open-source macOS launcher
           </h1>
           <h2 className="text-neutral-300 text-lg">
             Free, focused on simplicity and speed.
           </h2>
 
-          <div className="w-full max-w-4xl mx-auto p-2 border border-neutral-700 rounded-lg shadow-lg backdrop-blur-md bg-white/10">
+          <div className="w-full max-w-4xl mx-auto p-2 mt-12 border border-neutral-700 rounded-lg shadow-lg backdrop-blur-md bg-white/10">
             <Image
               src={preview}
               alt="preview"
