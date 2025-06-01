@@ -3,6 +3,7 @@ import Prompt from '../../components/Prompt'
 import {Key} from '../../components/Key'
 import Head from 'next/head'
 import Link from 'next/link'
+import MacKeyboard from '../../components/MacKeyboard'
 
 export default function Documentation() {
   return (
@@ -33,7 +34,7 @@ export default function Documentation() {
             Get Started
           </h1>
           <h2 className="text-neutral-400 text-lg mb-12">
-            Everything you need to know about Sol.
+            The basic tips to use Sol effectively
           </h2>
 
           {/* Installation */}
@@ -42,46 +43,19 @@ export default function Documentation() {
               <span className="text-neutral-400 font-thin text-base absolute -left-6">
                 01
               </span>
-              Installation
+              Invoke Sol
             </h2>
-            <p className="text-neutral-400 mb-6">
-              Download Sol using one of these methods
-            </p>
 
             <div className="space-y-8">
-              <div className="border border-neutral-700 rounded-lg p-6 bg-black/50">
-                <h3 className="text-lg font-medium text-white mb-3 flex items-center">
-                  <span className="mr-2">🍺</span>
-                  Via Homebrew (Recommended)
-                </h3>
-                <CommandPrompt />
-              </div>
+              <p className="text-neutral-400">
+                After installation always invoke Sol via the shortcut you
+                selected
+              </p>
 
-              <div className="border border-neutral-700 rounded-lg p-6 bg-black/50">
-                <h3 className="text-lg font-medium text-white mb-3 flex items-center">
-                  <span className="mr-2">📦</span>
-                  Manual Download
-                </h3>
-                <p className="text-neutral-400">
-                  Download the latest{' '}
-                  <a
-                    href="https://github.com/ospfranco/sol/releases"
-                    className="text-blue-500 hover:text-blue-400">
-                    release
-                  </a>{' '}
-                  from GitHub.
-                </p>
-              </div>
-
-              <div className="border border-blue-500/20 rounded-lg p-4 bg-blue-900/10">
-                <p className="text-blue-200 text-sm flex items-center">
-                  <span className="mr-2">💡</span>
-                  <span>
-                    <strong>Tip:</strong> After installation, launch Sol using
-                    your preferred keyboard shortcut.
-                  </span>
-                </p>
-              </div>
+              <MacKeyboard
+                highlightedKeys={['command', 'space']}
+                className="mt-6"
+              />
             </div>
           </div>
 
@@ -94,15 +68,14 @@ export default function Documentation() {
               Built-in Shortcuts
             </h2>
             <p className="text-neutral-400 mb-6">
-              Sol comes with many shortcuts. Type in the name of any one of
-              them:
+              Sol comes with many shortcuts. Type in the main search field to
+              access them them:
             </p>
 
             <div className="space-y-12">
               {/* Text and Data */}
               <div>
-                <h3 className="text-lg font-medium text-orange-400 mb-4 flex items-center">
-                  <span className="mr-2">📝</span>
+                <h3 className="text-lg text-orange-400 mb-4 flex items-center">
                   Text and Data
                 </h3>
                 <div className="space-y-4">
@@ -136,7 +109,6 @@ export default function Documentation() {
               {/* System Management */}
               <div>
                 <h3 className="text-lg font-medium text-red-400 mb-4 flex items-center">
-                  <span className="mr-2">⚙️</span>
                   System Management
                 </h3>
                 <div className="space-y-4">
@@ -170,7 +142,6 @@ export default function Documentation() {
               {/* Window Management */}
               <div>
                 <h3 className="text-lg font-medium text-indigo-400 mb-4 flex items-center">
-                  <span className="mr-2">🪟</span>
                   Window Management
                 </h3>
                 <div>
@@ -221,7 +192,6 @@ export default function Documentation() {
             <div className="space-y-8">
               <div className="border border-neutral-700 rounded-lg p-6 bg-black/50">
                 <h3 className="text-lg font-medium text-blue-400 mb-4 flex items-center">
-                  <span className="mr-2">🌍</span>
                   Translation
                 </h3>
                 <ol className="list-decimal ml-6 space-y-2 text-neutral-400">
