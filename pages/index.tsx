@@ -8,7 +8,7 @@ import xcode from '../public/xcode.png'
 import preview from '../public/preview.webp'
 import {Card} from '../components/Card'
 import logo from '../public/logo.png'
-import CommandPrompt from './components/CommandPrompt'
+import CommandPrompt from '../components/CommandPrompt'
 import Prompt from '../components/Prompt'
 
 export default function Home() {
@@ -47,7 +47,7 @@ export default function Home() {
               <span className="text-white font-bold text-lg">Sol</span>
             </div>
             <div className="flex gap-3">
-              <a href="./docs/">
+              <a href="./getting_started/">
                 <button className="text-white bg-black rounded-lg px-5 h-9 flex items-center text-xs  bg-opacity-70 hover:bg-neutral-700 transition duration-200">
                   Get Started
                 </button>
