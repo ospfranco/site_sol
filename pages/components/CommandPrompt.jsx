@@ -13,7 +13,7 @@ export default function CommandPrompt() {
 
   return (
     <div
-      className={`relative group w-full max-w-md mx-auto my-2 cursor-pointer transition border rounded-md px-3 py-2 bg-neutral-900 border-neutral-700 shadow flex items-center`}
+      className={`relative group w-full max-w-md my-2 cursor-pointer transition border rounded-md px-3 py-2 bg-neutral-900 border-neutral-700 shadow flex items-center`}
       onClick={handleCopy}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
