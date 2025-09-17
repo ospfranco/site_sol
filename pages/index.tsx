@@ -265,7 +265,7 @@ export default function Home() {
             objectFit="contain"
             className="rounded-full"
           />
-          <a href="www.ospfranco.com">
+          <a href="https://www.ospfranco.com">
             <span className="font-semibold text-white ml-1">ospfranco</span>
           </a>
         </div>
