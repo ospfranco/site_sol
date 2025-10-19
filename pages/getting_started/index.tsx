@@ -1,6 +1,6 @@
 import CommandPrompt from '../../components/CommandPrompt'
 import Prompt from '../../components/Prompt'
-import {Key} from '../../components/Key'
+import { Key } from '../../components/Key'
 import Head from 'next/head'
 import Link from 'next/link'
 import MacKeyboard from '../../components/MacKeyboard'
@@ -290,6 +290,41 @@ export default function Documentation() {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Script Commands */}
+          <div className="pb-16">
+            <h2 className="text-white text-2xl font-medium mt-4 relative">
+              <span className="text-neutral-400 font-thin text-base absolute -left-6">
+                05
+              </span>
+              Script Commands
+            </h2>
+            <p className="text-neutral-400 mb-6">
+              Sol automatically scans your script commands from{' '}
+              <span className="text-white font-mono">
+                ~/.config/sol/scripts
+              </span>
+              . Each script should start with special comments to define its name and icon:
+            </p>
+            <div className="border border-neutral-700 rounded-lg p-6 bg-black/50 mb-8">
+              <p className="text-neutral-400 mb-2">
+                <strong className="text-white">Required script header:</strong>
+              </p>
+              <pre className="bg-neutral-900 rounded p-4 text-sm text-neutral-200 overflow-x-auto">
+                {`# name: My Script
+# icon: 🚀
+echo "Hello from Sol!"`}
+              </pre>
+              <p className="text-neutral-400 mt-4">
+                <strong className="text-white">name</strong> — Display name for the script<br />
+                <strong className="text-white">icon</strong> — Emoji icon shown in Sol<br />
+                The script will appear in Sol’s search once saved in the scripts folder.
+              </p>
+            </div>
+            <p className="text-neutral-400">
+              You can create scripts for any custom automation or command-line task. Just add them to the folder and they’ll be instantly available!
+            </p>
           </div>
         </div>
 
